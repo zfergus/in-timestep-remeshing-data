@@ -1,0 +1,13 @@
+{
+    "default_params": "defaults.json",
+    "discr_orders_path": "/Users/zachary/Development/grad-research/contact/plasticity/scripts/squash/square/anisotropic_p_h=0.05_discr_order.txt",
+    "meshes": [{
+        "mesh": "../../../meshes/square/isotropic_h=0.05.msh",
+        "body_id": 1
+    }],
+    "export": {
+        "wireframe": true,
+        "high_order_mesh": false
+    },
+    "vismesh_rel_area": 1e-5
+}
