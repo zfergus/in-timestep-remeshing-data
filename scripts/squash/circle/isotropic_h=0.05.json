@@ -1,0 +1,10 @@
+{
+    "default_params": "defaults.json",
+    "meshes": [{
+        "mesh": "../../../meshes/circle/isotropic_h=0.05.msh",
+        "body_id": 1
+    }],
+    "export": [{
+        "time_sequence": "isotropic_h=0.05.pvd"
+    }]
+}

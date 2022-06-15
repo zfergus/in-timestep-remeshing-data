@@ -1,0 +1,14 @@
+{
+    "default_params": "defaults.json",
+    "discr_order": 2,
+    "meshes": [{
+        "mesh": "../../../meshes/circle/isotropic_h=0.05.msh",
+        "body_id": 1
+    }],
+    "export": {
+        "wireframe": true,
+        "high_order_mesh": false,
+        "time_sequence": "isotropic_p=2_h=0.05.pvd"
+    },
+    "vismesh_rel_area": 1e-5
+}
