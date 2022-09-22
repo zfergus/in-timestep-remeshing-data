@@ -1,0 +1,31 @@
+{
+    "common": "../common.json",
+    "boundary_conditions": {
+        "obstacle_displacements": [{
+            "id": 1,
+            "value": [0, "0.76 * smooth_abs(-t / 5 + 1, 5) - 0.76"]
+        }, {
+            "id": 2,
+            "value": [0, "-0.76 * smooth_abs(-t / 5 + 1, 5) + 0.76"]
+        }],
+        "rhs": [0, 0]
+    },
+    "time": {
+        "tend": 10.0,
+        "dt": 0.05
+    },
+    "materials": {
+        "type": "NeoHookean",
+        "E": 1e5,
+        "nu": 0.4,
+        "rho": 1000
+    },
+    "contact": {
+        "friction_coefficient": 0.1
+    },
+    "solver": {
+        "augmented_lagrangian": {
+            "max_weight": 1e11
+        }
+    }
+}
