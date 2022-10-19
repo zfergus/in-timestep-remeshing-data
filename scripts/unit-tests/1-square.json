@@ -27,12 +27,16 @@
             "translation": [0, -0.315]
         }
     }],
+    "solver": {
+        "ignore_inertia": true
+    },
     "contact": {
-        "enabled": false
+        "enabled": true
     },
     "time": {
         "dt": 0.025,
-        "time_steps": 21
+        "time_steps": 21,
+        "quasistatic": true
     },
     "boundary_conditions": {
         "rhs": [0, 0],
@@ -53,7 +57,8 @@
     }],
     "output": {
         "paraview": {
-            "file_name": "1-square.pvd"
+            "file_name": "1-square.pvd",
+            "surface": true
         }
     }
 }
