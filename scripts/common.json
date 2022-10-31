@@ -27,7 +27,7 @@
                 "material": true,
                 "body_ids": true
             },
-            "vismesh_rel_area": 10000000
+            "vismesh_rel_area": 1e7
         },
         "advanced": {
             "save_solve_sequence_debug": false,

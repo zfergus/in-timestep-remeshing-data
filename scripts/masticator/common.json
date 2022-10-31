@@ -1,5 +1,10 @@
 {
     "common": "../common.json",
+    "space": {
+        "remesh": {
+            "t0": 5.6
+        }
+    },
     "geometry": [{
         "mesh": "REPLACE_ME"
     }, {
@@ -80,11 +85,19 @@
         "rho": 1000
     },
     "contact": {
-        "friction_coefficient": 0.1
+        "friction_coefficient": 0
     },
     "solver": {
         "augmented_lagrangian": {
             "max_weight": 1e11
+        },
+        "ignore_inertia": true
+    },
+    "output": {
+        "paraview": {
+            "options": {
+                "contact_forces": true
+            }
         }
     }
 }

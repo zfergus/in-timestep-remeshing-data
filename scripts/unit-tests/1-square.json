@@ -1,5 +1,10 @@
 {
     "common": "../common.json",
+    "space": {
+        "remesh": {
+            "t0": 0.45
+        }
+    },
     "geometry": [{
         "mesh": "../../meshes/square/isotropic_h=0.1.msh",
         "transformation": {
