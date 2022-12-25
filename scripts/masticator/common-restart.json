@@ -2,7 +2,9 @@
     "common": "../common.json",
     "space": {
         "remesh": {
-            "t0": 5.6
+            "enabled": true,
+            "rel_tol": 1e-2,
+            "abs_tol": 1e-4
         }
     },
     "geometry": [{
@@ -67,15 +69,16 @@
     "boundary_conditions": {
         "obstacle_displacements": [{
             "id": 1,
-            "value": [0, "0.76 * max(-t / 5 + 1, 0) - 0.76"]
+            "value": [0, "0.76 * smooth_abs(-t / 5 + 1, 5) - 0.76"]
         }, {
             "id": 2,
-            "value": [0, "-0.76 * max(-t / 5 + 1, 0) + 0.76"]
+            "value": [0, "-0.76 * smooth_abs(-t / 5 + 1, 5) + 0.76"]
         }],
         "rhs": [0, 0]
     },
     "time": {
-        "tend": 6.0,
+        "t0": 0.0,
+        "tend": 10.0,
         "dt": 0.05
     },
     "materials": {
@@ -85,16 +88,37 @@
         "rho": 1000
     },
     "contact": {
-        "friction_coefficient": 0
+        "friction_coefficient": 0.5
     },
     "solver": {
-        "ignore_inertia": true
+        "contact": {
+            "friction_iterations": 1000
+        },
+        "ignore_inertia": false,
+        "nonlinear": {
+            "max_iterations": 3000
+        }
+    },
+    "input": {
+        "data": {
+            "u_path": "/home/zachary/Development/plasticity/output/masticator/local-warm-start/u118.txt",
+            "v_path": "/home/zachary/Development/plasticity/output/masticator/local-warm-start/v118.txt",
+            "a_path": "/home/zachary/Development/plasticity/output/masticator/local-warm-start/a118.txt"
+        }
     },
     "output": {
+        "data": {
+            "u_path": "u.txt",
+            "v_path": "v.txt",
+            "a_path": "a.txt"
+        },
         "paraview": {
             "options": {
                 "contact_forces": true
             }
+        },
+        "advanced": {
+            "save_solve_sequence_debug": false
         }
     }
 }

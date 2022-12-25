@@ -1,0 +1,53 @@
+{
+    "common": "../common.json",
+    "space": {
+        "remesh": {
+            "t0": 0,
+            "rel_tol": 1e-3,
+            "abs_tol": 1e-8
+        },
+        "advanced": {
+            "bc_method": "sample"
+        }
+    },
+    "geometry": [{
+        "mesh": "../../meshes/square/isotropic_h=0.1.msh",
+        "transformation": {
+            "translation": [0, 0],
+            "scale": 0.2
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "threshold": 0.001
+        }
+    }],
+    "contact": {
+        "enabled": true
+    },
+    "time": {
+        "dt": 0.025,
+        "time_steps": 21
+    },
+    "initial_conditions": {
+        "velocity": [{
+            "id": 1,
+            "value": ["-pi / 2 * y", "pi / 2 * x"]
+        }]
+    },
+    "boundary_conditions": {
+        "rhs": [0, 0]
+    },
+    "materials": [{
+        "id": 1,
+        "E": 3500,
+        "nu": 0.4,
+        "rho": 1000,
+        "type": "NeoHookean"
+    }],
+    "output": {
+        "paraview": {
+            "file_name": "1-square-rotating.pvd",
+            "surface": true
+        }
+    }
+}

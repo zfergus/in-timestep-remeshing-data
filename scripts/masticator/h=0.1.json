@@ -1,5 +1,5 @@
 {
-    "common": "common.json",
+    "common": "common-full.json",
     "patch": [{
         "op": "replace",
         "path": "/geometry/0/mesh",

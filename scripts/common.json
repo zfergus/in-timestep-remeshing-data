@@ -13,10 +13,10 @@
             },
             "solver": "newton",
             "grad_norm": 1e-05,
-            "use_grad_norm": false
+            "use_grad_norm": true
         },
         "advanced": {
-            "lump_mass_matrix": true
+            "lump_mass_matrix": false
         }
     },
     "output": {
@@ -27,6 +27,7 @@
                 "material": true,
                 "body_ids": true
             },
+            "surface": true,
             "vismesh_rel_area": 1e7
         },
         "advanced": {

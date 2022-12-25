@@ -2,7 +2,12 @@
     "common": "../common.json",
     "space": {
         "remesh": {
-            "t0": 0.45
+            "enabled": true,
+            "t0": 0.0,
+            "rel_tol": 1e-3,
+            "abs_tol": 1e-6,
+            "n_ring_size": 3,
+            "flood_fill_rel_area": 0.1
         }
     },
     "geometry": [{
@@ -12,17 +17,9 @@
             "scale": 0.2
         },
         "volume_selection": 1,
-        "surface_selection": [{
-            "id": 2,
-            "axis": "-y",
-            "position": 0.001,
-            "relative": true
-        }, {
-            "id": 4,
-            "axis": "+y",
-            "position": 0.999,
-            "relative": true
-        }]
+        "surface_selection": {
+            "threshold": 0.001
+        }
     }, {
         "mesh": "../../meshes/obstacles/line.obj",
         "enabled": false,
@@ -33,15 +30,18 @@
         }
     }],
     "solver": {
-        "ignore_inertia": true
+        "ignore_inertia": true,
+        "contact": {
+            "barrier_stiffness": 350
+        }
     },
     "contact": {
-        "enabled": true
+        "enabled": true,
+        "use_convergent_formulation": true
     },
     "time": {
         "dt": 0.025,
-        "time_steps": 21,
-        "quasistatic": true
+        "time_steps": 21
     },
     "boundary_conditions": {
         "rhs": [0, 0],
@@ -62,7 +62,7 @@
     }],
     "output": {
         "paraview": {
-            "file_name": "1-square.pvd",
+            "file_name": "sim.pvd",
             "surface": true
         }
     }

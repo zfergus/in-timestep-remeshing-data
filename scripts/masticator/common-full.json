@@ -1,5 +1,14 @@
 {
     "common": "../common.json",
+    "space": {
+        "remesh": {
+            "enabled": true,
+            "rel_tol": 1e-3,
+            "abs_tol": 1e-4,
+            "flood_fill_rel_area": 0.1,
+            "t0": 0.0
+        }
+    },
     "geometry": [{
         "mesh": "REPLACE_ME"
     }, {
@@ -83,8 +92,27 @@
         "friction_coefficient": 0.1
     },
     "solver": {
-        "augmented_lagrangian": {
-            "max_weight": 1e11
+        "contact": {
+            "friction_iterations": 1000,
+            "barrier_stiffness": 1e4
+        },
+        "ignore_inertia": false,
+        "nonlinear": {
+            "max_iterations": 3000
+        }
+    },
+    "output": {
+        "log": {
+            "path": "log.txt"
+        },
+        "data": {
+            "rest_mesh": "mesh_{:03d}.obj",
+            "u_path": "u_{:03d}.txt",
+            "v_path": "v_{:03d}.txt",
+            "a_path": "a_{:03d}.txt"
+        },
+        "advanced": {
+            "save_solve_sequence_debug": false
         }
     }
 }
