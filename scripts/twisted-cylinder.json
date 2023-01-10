@@ -1,0 +1,61 @@
+{
+    "common": "common.json",
+    "space": {
+        "remesh": {
+            "enabled": false,
+            "t0": 0.0,
+            "rel_tol": 1e-4,
+            "abs_tol": 1e-8,
+            "flood_fill_rel_area": 0.01,
+            "threshold": 0.9
+        }
+    },
+    "geometry": [{
+        "mesh": "../meshes/hollow-cylinder/N=100.msh",
+        "transformation": {
+            "rotation": [0, 90, 0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "threshold": 0.001
+        }
+    }],
+    "solver": {
+        "contact": {
+            "barrier_stiffness": 1e4
+        },
+        "ignore_inertia": true
+    },
+    "contact": {
+        "enabled": true
+    },
+    "time": {
+        "dt": 0.025,
+        "tend": 1.1
+    },
+    "boundary_conditions": {
+        "rhs": [0, 9.8, 0],
+        "dirichlet_boundary": [{
+            "id": 1,
+            "value": [
+                -0.5,
+                "y*cos(pi/9 * min(t, 1)) - y - z*sin(pi/9 * min(t, 1))",
+                "y*sin(pi/9 * min(t, 1)) + z*cos(pi/9 * min(t, 1)) - z"
+            ]
+        }, {
+            "id": 3,
+            "value": [
+                0.5,
+                "y*cos(pi/9 * min(t, 1)) - y + z*sin(pi/9 * min(t, 1))",
+                "-y*sin(pi/9 * min(t, 1)) + z*cos(pi/9 * min(t, 1)) - z"
+            ]
+        }]
+    },
+    "materials": [{
+        "id": 1,
+        "E": 1e6,
+        "nu": 0.4,
+        "rho": 1000,
+        "type": "NeoHookean"
+    }]
+}

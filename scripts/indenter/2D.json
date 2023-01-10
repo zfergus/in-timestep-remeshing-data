@@ -1,0 +1,33 @@
+{
+    "common": "common.json",
+    "geometry": [{
+        "mesh": "../../meshes/indenter-symmetric.obj",
+        "volume_selection": [{
+            "axis": "y",
+            "position": 0.6,
+            "id": 1
+        }, {
+            "axis": "-y",
+            "position": -0.5,
+            "id": 1
+        }, {
+            "box": [
+                [0, 0],
+                [1, 1]
+            ],
+            "relative": true,
+            "id": 2
+        }],
+        "surface_selection": [{
+            "axis": "y",
+            "position": 0.99,
+            "relative": true,
+            "id": 2
+        }, {
+            "axis": "-y",
+            "position": 0.01,
+            "relative": true,
+            "id": 4
+        }]
+    }]
+}

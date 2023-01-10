@@ -1,0 +1,60 @@
+{
+    "common": "../common.json",
+    "space": {
+        "remesh": {
+            "enabled": true,
+            "t0": 0.0,
+            "rel_tol": 1e-4,
+            "abs_tol": 1e-7,
+            "flood_fill_rel_area": 0.01,
+            "threshold": 0.9
+        }
+    },
+    "geometry": [{
+        "mesh": "../../meshes/circle/isotropic_h=0.1.msh",
+        "transformation": {
+            "translation": [-2.5, 0]
+        },
+        "volume_selection": 1
+    }, {
+        "mesh": "../../meshes/squircle.msh",
+        "is_obstacle": true,
+        "transformation": {
+            "dimensions": [0.1, 0.1]
+        }
+    }],
+    "solver": {
+        "contact": {
+            "barrier_stiffness": 1e4
+        }
+    },
+    "contact": {
+        "enabled": true
+    },
+    "time": {
+        "dt": 0.01,
+        "tend": 1.0
+    },
+    "initial_conditions": {
+        "velocity": [{
+            "id": 1,
+            "value": [20, 0]
+        }]
+    },
+    "boundary_conditions": {
+        "rhs": [0, 0]
+    },
+    "materials": {
+        "type": "NeoHookean",
+        "E": 1e4,
+        "nu": 0.4,
+        "rho": 1150
+    },
+    "output": {
+        "paraview": {
+            "options": {
+                "velocity": true
+            }
+        }
+    }
+}

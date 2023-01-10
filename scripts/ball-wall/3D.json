@@ -1,0 +1,21 @@
+{
+    "common": "common.json",
+    "space": {
+        "remesh": {
+            "enabled": false
+        }
+    },
+    "geometry": [{
+        "mesh": "../../meshes/sphere/sphere1K.msh",
+        "transformation": {
+            "translation": [-2.5, 0]
+        },
+        "volume_selection": 1
+    }, {
+        "mesh": "../meshes/obstacles/plane.obj",
+        "is_obstacle": true,
+        "transformation": {
+            "rotation": 90
+        }
+    }]
+}

@@ -1,0 +1,90 @@
+{
+    "common": "../common.json",
+    "space": {
+        "remesh": {
+            "enabled": true,
+            "t0": 0.0,
+            "rel_tol": 1e-3,
+            "abs_tol": 1e-6,
+            "threshold": 0
+        }
+    },
+    "geometry": [{
+        "mesh": "REPLACE_ME",
+        "volume_selection": [{
+            "axis": "y",
+            "position": 0.6,
+            "id": 1
+        }, {
+            "axis": "-y",
+            "position": -0.5,
+            "id": 1
+        }, {
+            "box": [
+                [0, 0],
+                [1, 1]
+            ],
+            "relative": true,
+            "id": 2
+        }],
+        "surface_selection": [{
+            "axis": "y",
+            "position": 0.99,
+            "relative": true,
+            "id": 2
+        }, {
+            "axis": "-y",
+            "position": 0.01,
+            "relative": true,
+            "id": 4
+        }]
+    }],
+    "solver": {
+        "contact": {
+            "friction_iterations": 1000,
+            "barrier_stiffness": 1e8
+        },
+        "nonlinear": {
+            "f_delta": 1e-13
+        },
+        "ignore_inertia": true
+    },
+    "contact": {
+        "enabled": true,
+        "friction_coefficient": 0
+    },
+    "time": {
+        "dt": 0.01,
+        "tend": 0.2
+    },
+    "boundary_conditions": {
+        "rhs": [0, 0],
+        "dirichlet_boundary": [{
+            "id": 2,
+            "value": [0, "-t"]
+        }, {
+            "id": 4,
+            "value": [0, 0]
+        }]
+    },
+    "materials": [{
+        "id": 1,
+        "type": "NeoHookean",
+        "E": 1e8,
+        "nu": 0.4,
+        "rho": 1150
+    }, {
+        "id": 2,
+        "type": "NeoHookean",
+        "E": 1e5,
+        "nu": 0.4,
+        "rho": 1150
+    }],
+    "output": {
+        "paraview": {
+            "options": {
+                "velocity": true
+            }
+        }
+    }
+}

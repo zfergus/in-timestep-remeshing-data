@@ -21,6 +21,9 @@
     },
     "output": {
         "json": "sim.json",
+        "log": {
+            "path": "log.txt"
+        },
         "paraview": {
             "file_name": "sim.pvd",
             "options": {

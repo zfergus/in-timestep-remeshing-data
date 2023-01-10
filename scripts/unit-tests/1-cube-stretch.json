@@ -1,0 +1,60 @@
+{
+    "common": "../common.json",
+    "space": {
+        "remesh": {
+            "enabled": true,
+            "t0": 0.0,
+            "n_ring_size": 3,
+            "flood_fill_rel_area": 0.1
+        }
+    },
+    "geometry": [{
+        "mesh": "../../meshes/cube.msh",
+        "transformation": {
+            "translation": [0, 0, 0],
+            "scale": 0.2
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "threshold": 0.001
+        }
+    }, {
+        "mesh": "../../meshes/3D/obstacles/plane.obj",
+        "enabled": false,
+        "is_obstacle": true,
+        "surface_selection": 0,
+        "transformation": {
+            "translation": [0, -0.315, 0]
+        }
+    }],
+    "solver": {
+        "ignore_inertia": true,
+        "contact": {
+            "barrier_stiffness": 350
+        }
+    },
+    "contact": {
+        "enabled": true
+    },
+    "time": {
+        "dt": 0.025,
+        "time_steps": 21
+    },
+    "boundary_conditions": {
+        "rhs": [0, 0, 0],
+        "dirichlet_boundary": [{
+            "id": 4,
+            "value": [0, "0.5 * 0.7 * t", 0]
+        }, {
+            "id": 2,
+            "value": [0, 0, 0]
+        }]
+    },
+    "materials": [{
+        "id": 1,
+        "E": 3500,
+        "nu": 0.4,
+        "rho": 1000,
+        "type": "NeoHookean"
+    }]
+}

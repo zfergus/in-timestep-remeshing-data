@@ -1,0 +1,76 @@
+{
+    "common": "common.json",
+    "space": {
+        "remesh": {
+            "enabled": true
+        }
+    },
+    "geometry": [{
+        "mesh": "../../meshes/beam.msh",
+        "transformation": {
+            "rotation": [0, 0, 90],
+            "dimensions": [0.5, 4, 0.5]
+        }
+    }, {
+        "mesh": "../../meshes/cube.msh",
+        "is_obstacle": true,
+        "transformation": {
+            "translation": [-1, 0.51, 0],
+            "dimensions": [0.25, 0.25, 1.0]
+        },
+        "surface_selection": 1
+    }, {
+        "mesh": "../../meshes/cube.msh",
+        "is_obstacle": true,
+        "transformation": {
+            "translation": [0, 0.51, 0],
+            "dimensions": [0.25, 0.25, 1.0]
+        },
+        "surface_selection": 1
+    }, {
+        "mesh": "../../meshes/cube.msh",
+        "is_obstacle": true,
+        "transformation": {
+            "translation": [1, 0.51, 0],
+            "dimensions": [0.25, 0.25, 1.0]
+        },
+        "surface_selection": 1
+    }, {
+        "mesh": "../../meshes/cube.msh",
+        "is_obstacle": true,
+        "transformation": {
+            "translation": [-1.5, -0.51, 0],
+            "dimensions": [0.25, 0.25, 1.0]
+        },
+        "surface_selection": 2
+    }, {
+        "mesh": "../../meshes/cube.msh",
+        "is_obstacle": true,
+        "transformation": {
+            "translation": [-0.5, -0.51, 0],
+            "dimensions": [0.25, 0.25, 1.0]
+        },
+        "surface_selection": 2
+    }, {
+        "mesh": "../../meshes/cube.msh",
+        "is_obstacle": true,
+        "transformation": {
+            "translation": [0.5, -0.51, 0],
+            "dimensions": [0.25, 0.25, 1.0]
+        },
+        "surface_selection": 2
+    }, {
+        "mesh": "../../meshes/cube.msh",
+        "is_obstacle": true,
+        "transformation": {
+            "translation": [1.5, -0.51, 0],
+            "dimensions": [0.25, 0.25, 1.0]
+        },
+        "surface_selection": 2
+    }],
+    "output": {
+        "data": {
+            "rest_mesh": ""
+        }
+    }
+}
