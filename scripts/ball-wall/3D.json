@@ -1,21 +1,29 @@
 {
     "common": "common.json",
-    "space": {
-        "remesh": {
-            "enabled": false
-        }
-    },
     "geometry": [{
         "mesh": "../../meshes/sphere/sphere1K.msh",
         "transformation": {
-            "translation": [-2.5, 0]
+            "scale": 0.04
         },
         "volume_selection": 1
     }, {
-        "mesh": "../meshes/obstacles/plane.obj",
+        "mesh": "../../meshes/obstacles/plane.obj",
         "is_obstacle": true,
         "transformation": {
-            "rotation": 90
+            "dimensions": [0.4, 0, 0.4],
+            "rotation": [0, 0, 90],
+            "translation": [0.105, 0, 0]
         }
-    }]
+    }],
+    "solver": {
+        "nonlinear": {
+            "grad_norm": 1e-9,
+            "f_delta": 1e-15,
+            "first_grad_norm_tol": 1e-15,
+            "use_grad_norm": true
+        }
+    },
+    "materials": {
+        "E": 1e6
+    }
 }

@@ -3,11 +3,11 @@
     "space": {
         "remesh": {
             "enabled": true,
-            "rel_tol": 1e-4,
-            "abs_tol": 1e-6,
-            "flood_fill_rel_area": 0.01,
+            "split_tol": 1e-3,
+            "flood_fill_rel_area": 0.1,
             "t0": 0.0,
-            "threshold": 0
+            "threshold": 0.9,
+            "max_collapse_edge_length": 0.05
         }
     },
     "boundary_conditions": {
@@ -31,7 +31,7 @@
         "rho": 1000
     },
     "contact": {
-        "friction_coefficient": 0.1
+        "friction_coefficient": 0
     },
     "solver": {
         "contact": {

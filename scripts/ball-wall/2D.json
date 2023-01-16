@@ -3,14 +3,16 @@
     "geometry": [{
         "mesh": "../../meshes/circle/isotropic_h=0.1.msh",
         "transformation": {
-            "translation": [-2.5, 0]
+            "scale": 0.04
         },
         "volume_selection": 1
     }, {
-        "mesh": "../meshes/obstacles/line.obj",
+        "mesh": "../../meshes/obstacles/line.obj",
         "is_obstacle": true,
         "transformation": {
-            "rotation": 90
+            "dimensions": [0.4, 0],
+            "rotation": 90,
+            "translation": [0.105, 0]
         }
     }]
 }

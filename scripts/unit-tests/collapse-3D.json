@@ -1,0 +1,38 @@
+{
+    "common": "../common.json",
+    "space": {
+        "remesh": {
+            "enabled": true,
+            "t0": 0.0
+        }
+    },
+    "geometry": [{
+        "mesh": "../../meshes/beam.msh",
+        "volume_selection": 1,
+        "surface_selection": {
+            "threshold": 0.001
+        }
+    }],
+    "solver": {
+        "contact": {
+            "barrier_stiffness": 1e6
+        }
+    },
+    "contact": {
+        "enabled": true
+    },
+    "time": {
+        "dt": 0.01,
+        "time_steps": 10
+    },
+    "boundary_conditions": {
+        "rhs": [0, 0, 0]
+    },
+    "materials": [{
+        "id": 1,
+        "E": 1e7,
+        "nu": 0.4,
+        "rho": 1000,
+        "type": "NeoHookean"
+    }]
+}
