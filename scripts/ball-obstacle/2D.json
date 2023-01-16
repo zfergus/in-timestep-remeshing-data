@@ -4,8 +4,7 @@
         "remesh": {
             "enabled": true,
             "t0": 0.0,
-            "rel_tol": 1e-4,
-            "abs_tol": 1e-7,
+            "split_tol": 1e-5,
             "flood_fill_rel_area": 0.01,
             "threshold": 0.9
         }
