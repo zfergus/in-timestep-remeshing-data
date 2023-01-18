@@ -2,12 +2,12 @@
     "common": "common.json",
     "space": {
         "remesh": {
-            "enabled": false,
+            "enabled": true,
             "t0": 0.0,
-            "rel_tol": 1e-4,
-            "abs_tol": 1e-8,
+            "split_tol": 1e-4,
             "flood_fill_rel_area": 0.01,
-            "threshold": 0.9
+            "threshold": 0.9,
+            "max_collapse_edge_length": 0.1
         }
     },
     "geometry": [{

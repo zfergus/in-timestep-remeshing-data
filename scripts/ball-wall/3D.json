@@ -1,5 +1,12 @@
 {
     "common": "common.json",
+    "space": {
+        "remesh": {
+            "split_tol": 1e-14,
+            "collapse_tol": -1e-16,
+            "flood_fill_rel_area": 0.01
+        }
+    },
     "geometry": [{
         "mesh": "../../meshes/sphere/sphere1K.msh",
         "transformation": {
