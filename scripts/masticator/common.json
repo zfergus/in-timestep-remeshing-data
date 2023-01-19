@@ -45,16 +45,5 @@
         "augmented_lagrangian": {
             "initial_weight": 0.005
         }
-    },
-    "output": {
-        "data": {
-            "rest_mesh": "mesh_{:03d}.obj",
-            "u_path": "u_{:03d}.txt",
-            "v_path": "v_{:03d}.txt",
-            "a_path": "a_{:03d}.txt"
-        },
-        "advanced": {
-            "save_solve_sequence_debug": false
-        }
     }
 }

@@ -3,8 +3,7 @@
     "space": {
         "remesh": {
             "enabled": true,
-            "split_tol": 1e-5,
-            "flood_fill_rel_area": 0.1
+            "split_tol": 1e-5
         }
     },
     "geometry": [{
@@ -69,10 +68,5 @@
             "dimensions": [0.25, 0.25, 1.0]
         },
         "surface_selection": 2
-    }],
-    "output": {
-        "data": {
-            "rest_mesh": ""
-        }
-    }
+    }]
 }

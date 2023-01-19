@@ -36,6 +36,13 @@
         "advanced": {
             "save_solve_sequence_debug": false,
             "save_time_sequence": true
+        },
+        "restart_json": "restart_{:03d}.json",
+        "data": {
+            "rest_mesh": "restart_mesh_{:03d}.msh",
+            "u_path": "restart_u_{:03d}.bin",
+            "v_path": "restart_v_{:03d}.bin",
+            "a_path": "restart_a_{:03d}.bin"
         }
     }
 }
