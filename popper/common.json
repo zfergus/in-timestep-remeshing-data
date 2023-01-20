@@ -1,0 +1,85 @@
+{
+    "contact": {
+        "enabled": true,
+        "dhat": 0.001
+    },
+    "geometry": [
+        {
+            "mesh": "PATCH",
+            "volume_selection": 1
+        },
+        {
+            "mesh": "pusher3d.obj",
+            "is_obstacle": true,
+            "surface_selection": 2,
+            "transformation": {
+                "translation": [
+                    0,
+                    1.2,
+                    0
+                ]
+            }
+        }
+    ],
+    "solver": {
+        "max_threads": 8,
+        "linear": {
+            "solver": "Eigen::PardisoLDLT"
+        },
+        "nonlinear": {
+            "line_search": {
+                "method": "backtracking"
+            },
+            "solver": "newton",
+            "grad_norm": 1e-05,
+            "use_grad_norm": false
+        }
+    },
+    "time": {
+        "tend": 1,
+        "dt": 0.01
+    },
+    "boundary_conditions": {
+        "dirichlet_boundary": [
+            "PATCH"
+        ],
+        "obstacle_displacements": [
+            {
+                "id": 2,
+                "value": [
+                    0,
+                    "-2*t",
+                    0
+                ]
+            }
+        ]
+    },
+    "materials": [
+        {
+            "id": 1,
+            "E": 5e7,
+            "nu": 0.4,
+            "rho": 1100,
+            "type": "NeoHookean"
+        }
+    ],
+    "output": {
+        "json": "out.json",
+        "data": {
+            "solution": "sol.txt"
+        },
+        "paraview": {
+            "file_name": "sim.pvd",
+            "high_order_mesh": false,
+            "wireframe": true,
+            "surface": true,
+            "points": true,
+            "options": {
+                "material": true,
+                "body_ids": true,
+                "contact_forces": true
+            },
+            "vismesh_rel_area": 0.3
+        }
+    }
+}

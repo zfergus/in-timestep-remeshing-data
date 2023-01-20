@@ -1,0 +1,23 @@
+{
+    "common": "common.json",
+    "patch": [
+        {
+            "op": "replace",
+            "path": "/geometry/0/mesh",
+            "value": "popper5-5.msh"
+        },
+        {
+            "op": "replace",
+            "path": "/boundary_conditions/dirichlet_boundary/0",
+            "value": "popper5-5.txt"
+        },
+        {
+            "op": "replace",
+            "path": "/time/tend",
+            "value": 0.44
+        }
+    ],
+    "output": {
+        "directory": "../results/popper5-5"
+    }
+}
