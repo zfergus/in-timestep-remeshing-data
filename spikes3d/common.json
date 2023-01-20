@@ -1,0 +1,87 @@
+{
+    "contact": {
+        "enabled": true,
+        "dhat": 0.001
+    },
+    "solver": {
+        "max_threads": 8,
+        "linear": {
+            "solver": "Eigen::PardisoLDLT"
+        },
+        "nonlinear": {
+            "line_search": {
+                "method": "backtracking"
+            },
+            "solver": "newton",
+            "grad_norm": 1e-05,
+            "use_grad_norm": false
+        }
+    },
+    "time": {
+        "tend": 2,
+        "dt": 0.01
+    },
+    "boundary_conditions": {
+        "dirichlet_boundary": [
+            {
+                "id": 2,
+                "value": [
+                    "0.9 - sin(2*pi*t+pi/4)/sqrt(2)*2.4*(1-t) - -0.3",
+                    "0",
+                    "0.9 - cos(2*pi*t+pi/4)/sqrt(2)*2.4*(1-t) - -0.3"
+                ]
+            },
+            {
+                "id": 1,
+                "value": [
+                    0,
+                    0,
+                    0
+                ]
+            }
+        ],
+        "obstacle_displacements": [
+            {
+                "id": 1,
+                "value": [
+                    "0.9 - sin(2*pi*t+pi/4)/sqrt(2)*2.4*(1-t) - -0.3",
+                    "0",
+                    "0.9 - cos(2*pi*t+pi/4)/sqrt(2)*2.4*(1-t) - -0.3"
+                ]
+            }
+        ]
+    },
+    "materials": [
+        {
+            "id": 1,
+            "E": 5e7,
+            "nu": 0.4,
+            "rho": 1100,
+            "type": "NeoHookean"
+        },
+        {
+            "id": 2,
+            "E": 5e7,
+            "nu": 0.4,
+            "rho": 1100,
+            "type": "NeoHookean"
+        }
+    ],
+    "output": {
+        "json": "out.json",
+        "data": {
+            "solution": "sol.txt"
+        },
+        "paraview": {
+            "file_name": "sim.pvd",
+            "wireframe": true,
+            "surface": true,
+            "options": {
+                "material": true,
+                "body_ids": true,
+                "contact_forces": true
+            }
+        },
+        "directory": "../results/spikes3d"
+    }
+}
