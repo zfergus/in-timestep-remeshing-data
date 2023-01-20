@@ -7,13 +7,15 @@ SCRIPTS_ROOT=$SCRATCH/$PROJECT_NAME/scripts
 
 # 2. Fill in this list with the input scripts you want to run
 SCRIPTS=(
-    "$SCRIPTS_ROOT/masticator/3D.json"
+    # "$SCRIPTS_ROOT/masticator/3D.json"
+    "$SCRIPTS_ROOT/masticator/3D-restart-039.json"
     # "$SCRIPTS_ROOT/ball-wall/3D.json"
     # "$SCRIPTS_ROOT/twisting.json"
     # "$SCRIPTS_ROOT/twisted-cylinder.json"
 )
 JOB_NAMES=(
-    "masticator_3D"
+    # "masticator_3D"
+    "restart_039"
     # "ball_wall_3D"
     # "twisting_beam"
     # "twisted-cylinder"
