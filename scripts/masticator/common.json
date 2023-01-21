@@ -14,10 +14,10 @@
     "boundary_conditions": {
         "obstacle_displacements": [{
             "id": 1,
-            "value": [0, "0.76 * smooth_abs(-t / 5 + 1, 5) - 0.76", 0]
+            "value": [0, "0.76 * smooth_abs(-min(t, 10) / 5 + 1, 5) - 0.76", 0]
         }, {
             "id": 2,
-            "value": [0, "-0.76 * smooth_abs(-t / 5 + 1, 5) + 0.76", 0]
+            "value": [0, "-0.76 * smooth_abs(-min(t, 10) / 5 + 1, 5) + 0.76", 0]
         }],
         "rhs": [0, 0, 0]
     },
