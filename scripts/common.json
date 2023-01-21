@@ -29,7 +29,10 @@
             "file_name": "sim.pvd",
             "options": {
                 "material": true,
-                "body_ids": true
+                "body_ids": true,
+                "velocity": true,
+                "contact_forces": true,
+                "friction_forces": true
             },
             "surface": true,
             "vismesh_rel_area": 1e7

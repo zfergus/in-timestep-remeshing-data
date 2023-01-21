@@ -1,7 +1,6 @@
 {
     "common": "common.json",
-    "patch": [
-        {
+    "patch": [{
             "op": "replace",
             "path": "/geometry/0/mesh",
             "value": "monkey18K_u.msh"
@@ -21,8 +20,5 @@
             "path": "/geometry/2/volume_selection/1/id",
             "value": 1
         }
-    ],
-    "output": {
-        "directory": "../results/monkey-hard-hard"
-    }
+    ]
 }

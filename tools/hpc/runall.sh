@@ -16,8 +16,10 @@ SCRIPTS=(
     # "$SCRIPTS_ROOT/masticator/3D.json"
     # "$SCRIPTS_ROOT/masticator/h=0.1.json"
     # "$SCRIPTS_ROOT/masticator/h=0.05.json"
-    "$SCRIPTS_ROOT/unit-tests/sliding.json"
+    # "$SCRIPTS_ROOT/unit-tests/sliding.json"
     # "$SCRIPTS_ROOT/twisting-beam.json"
+    # "$SCRIPTS_ROOT/spikes2d/spikes2d.json"
+    # "$SCRIPTS_ROOT/spikes3d/spikes3d.json"
 )
 JOB_NAMES=(
     # "ball-obstacle-2D-highres"
@@ -29,8 +31,10 @@ JOB_NAMES=(
     # "masticator-3D"
     # "masticator-h=0.1"
     # "masticator-h=0.05"
-    "sliding"
+    # "sliding"
     # "twisting-beam"
+    # "spikes2d"
+    # "spikes3d"
 )
 
 # 3. Change this to the directory containing the output files

@@ -1,18 +1,14 @@
 {
     "common": "back.json",
-    "patch": [
-        {
-            "op": "replace",
-            "path": "/geometry/0/mesh",
-            "value": "popper5-5.msh"
-        }
-    ],
-    "output": {
-        "directory": "../results/popper5-5_back"
-    },
+    "patch": [{
+        "op": "replace",
+        "path": "/geometry/0/mesh",
+        "value": "popper5-5.msh"
+    }],
     "input": {
         "data": {
-            "u_path": "popper5-5_sol.txt"
+            "u_path": "popper5-5_sol.txt",
+            "reorder": false
         }
     }
 }

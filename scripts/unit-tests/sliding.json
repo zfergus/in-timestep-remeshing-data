@@ -2,10 +2,7 @@
     "common": "../common.json",
     "space": {
         "remesh": {
-            "enabled": true,
-            "collapse": {
-                "max_edge_length": 0.05
-            }
+            "enabled": true
         }
     },
     "geometry": [{
@@ -56,11 +53,5 @@
         "nu": 0.4,
         "rho": 1000,
         "type": "NeoHookean"
-    }],
-    "output": {
-        "paraview": {
-            "file_name": "sim.pvd",
-            "surface": true
-        }
-    }
+    }]
 }

@@ -2,10 +2,7 @@
     "common": "common.json",
     "space": {
         "remesh": {
-            "enabled": true,
-            "collapse": {
-                "max_edge_length": 0.1
-            }
+            "enabled": true
         }
     },
     "geometry": [{

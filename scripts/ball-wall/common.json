@@ -7,8 +7,7 @@
                 "acceptance_tolerance": 1e-12
             },
             "collapse": {
-                "acceptance_tolerance": -1e-14,
-                "max_edge_length": 0.001
+                "acceptance_tolerance": -1e-14
             }
         }
     },
@@ -39,14 +38,5 @@
         "E": 1e6,
         "nu": 0.45,
         "rho": 1150
-    },
-    "output": {
-        "paraview": {
-            "options": {
-                "prev_sol": true,
-                "velocity": true,
-                "acceleration": true
-            }
-        }
     }
 }

@@ -5,9 +5,6 @@
             "enabled": true,
             "split": {
                 "acceptance_tolerance": 1e-3
-            },
-            "collapse": {
-                "max_edge_length": 0.05
             }
         }
     },

@@ -2,10 +2,7 @@
     "common": "../common.json",
     "space": {
         "remesh": {
-            "enabled": true,
-            "collapse": {
-                "max_edge_length": 0.1
-            }
+            "enabled": true
         }
     },
     "geometry": [{
@@ -78,12 +75,5 @@
         "E": 1e5,
         "nu": 0.4,
         "rho": 1150
-    }],
-    "output": {
-        "paraview": {
-            "options": {
-                "velocity": true
-            }
-        }
-    }
+    }]
 }
