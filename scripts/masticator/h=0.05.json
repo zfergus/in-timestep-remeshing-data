@@ -4,5 +4,10 @@
         "op": "replace",
         "path": "/geometry/0/mesh",
         "value": "../../meshes/beam/isotropic_h=0.05.msh"
-    }]
+    }],
+    "space": {
+        "remesh": {
+            "enabled": false
+        }
+    }
 }

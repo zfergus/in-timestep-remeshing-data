@@ -3,11 +3,9 @@
     "space": {
         "remesh": {
             "enabled": true,
-            "t0": 0.0,
-            "rel_tol": 1e-3,
-            "abs_tol": 1e-6,
-            "n_ring_size": 3,
-            "flood_fill_rel_area": 0.1
+            "collapse": {
+                "max_edge_length": 0.05,
+            }
         }
     },
     "geometry": [{

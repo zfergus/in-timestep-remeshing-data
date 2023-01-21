@@ -3,7 +3,9 @@
     "space": {
         "remesh": {
             "enabled": true,
-            "split_tol": 1e-5
+            "split": {
+                "acceptance_tolerance": 1e-5
+            }
         }
     },
     "geometry": [{

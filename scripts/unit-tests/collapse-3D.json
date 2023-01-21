@@ -2,8 +2,7 @@
     "common": "../common.json",
     "space": {
         "remesh": {
-            "enabled": true,
-            "t0": 0.0
+            "enabled": true
         }
     },
     "geometry": [{

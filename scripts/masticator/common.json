@@ -3,11 +3,12 @@
     "space": {
         "remesh": {
             "enabled": true,
-            "split_tol": 1e-3,
-            "flood_fill_rel_area": 0.01,
-            "t0": 0.0,
-            "threshold": 0.95,
-            "max_collapse_edge_length": 0.05
+            "split": {
+                "acceptance_tolerance": 1e-3
+            },
+            "collapse": {
+                "max_edge_length": 0.05
+            }
         }
     },
     "boundary_conditions": {
