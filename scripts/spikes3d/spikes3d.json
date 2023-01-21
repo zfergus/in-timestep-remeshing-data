@@ -2,7 +2,10 @@
     "common": "../common.json",
     "space": {
         "remesh": {
-            "enabled": true
+            "enabled": true,
+            "split": {
+                "acceptance_tolerance": 1e-5
+            }
         }
     },
     "geometry": [{
@@ -1108,10 +1111,14 @@
     }, {
         "mesh": "box.msh",
         "volume_selection": 2,
+        "transformation": {
+            "translation": [0.0, -0.5]
+        },
         "surface_selection": {
             "id": 2,
             "axis": 2,
-            "position": 1.5399999999999998
+            "position": 0.99,
+            "relative": true
         }
     }],
     "contact": {
@@ -1119,7 +1126,7 @@
     },
     "solver": {
         "contact": {
-            "barrier_stiffness": 5e6
+            "barrier_stiffness": 5e4
         }
     },
     "time": {
@@ -1141,13 +1148,13 @@
     },
     "materials": [{
         "id": 1,
-        "E": 5e7,
+        "E": 5e5,
         "nu": 0.4,
         "rho": 1100,
         "type": "NeoHookean"
     }, {
         "id": 2,
-        "E": 5e7,
+        "E": 5e5,
         "nu": 0.4,
         "rho": 1100,
         "type": "NeoHookean"
