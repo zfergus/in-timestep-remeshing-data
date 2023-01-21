@@ -4,7 +4,7 @@
         "remesh": {
             "enabled": true,
             "collapse": {
-                "max_edge_length": 0.05,
+                "max_edge_length": 0.05
             }
         }
     },
@@ -31,6 +31,11 @@
     "contact": {
         "enabled": true,
         "friction_coefficient": 0.5
+    },
+    "solver": {
+        "contact": {
+            "barrier_stiffness": 35000
+        }
     },
     "time": {
         "dt": 0.025,
