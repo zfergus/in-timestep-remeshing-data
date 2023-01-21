@@ -1,0 +1,28 @@
+{
+    "common": "/scratch/zjf214/remeshing-project/scripts/masticator/3D.json",
+    "input": {
+        "data": {
+            "a_path": "/scratch/zjf214/remeshing-project/results/masticator/3D/2023_01_20_01_09_18_999/restart_a_040.txt",
+            "u_path": "/scratch/zjf214/remeshing-project/results/masticator/3D/2023_01_20_01_09_18_999/restart_u_040.txt",
+            "v_path": "/scratch/zjf214/remeshing-project/results/masticator/3D/2023_01_20_01_09_18_999/restart_v_040.txt"
+        }
+    },
+    "patch": [{
+        "op": "remove",
+        "path": "/geometry/0"
+    }, {
+        "op": "add",
+        "path": "/geometry/0",
+        "value": {
+            "mesh": "/scratch/zjf214/remeshing-project/results/masticator/3D/2023_01_20_01_09_18_999/restart_mesh_040.msh"
+        }
+    }, {
+        "op": "remove",
+        "path": "/time/tend"
+    }],
+    "root_path": "/scratch/zjf214/remeshing-project/scripts/masticator/3D.json",
+    "time": {
+        "t0": 2.0,
+        "time_steps": 1
+    }
+}

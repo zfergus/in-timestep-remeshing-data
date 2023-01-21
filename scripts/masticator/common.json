@@ -3,20 +3,21 @@
     "space": {
         "remesh": {
             "enabled": true,
-            "split_tol": 1e-3,
-            "flood_fill_rel_area": 0.01,
-            "t0": 0.0,
-            "threshold": 0.9,
-            "max_collapse_edge_length": 0.05
+            "split": {
+                "acceptance_tolerance": 1e-3
+            },
+            "collapse": {
+                "max_edge_length": 0.05
+            }
         }
     },
     "boundary_conditions": {
         "obstacle_displacements": [{
             "id": 1,
-            "value": [0, "0.76 * smooth_abs(-t / 5 + 1, 5) - 0.76", 0]
+            "value": [0, "0.76 * smooth_abs(-min(t, 10) / 5 + 1, 5) - 0.76", 0]
         }, {
             "id": 2,
-            "value": [0, "-0.76 * smooth_abs(-t / 5 + 1, 5) + 0.76", 0]
+            "value": [0, "-0.76 * smooth_abs(-min(t, 10) / 5 + 1, 5) + 0.76", 0]
         }],
         "rhs": [0, 0, 0]
     },

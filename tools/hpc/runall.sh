@@ -7,16 +7,30 @@ SCRIPTS_ROOT=$SCRATCH/$PROJECT_NAME/scripts
 
 # 2. Fill in this list with the input scripts you want to run
 SCRIPTS=(
-    "$SCRIPTS_ROOT/masticator/3D.json"
+    # "$SCRIPTS_ROOT/ball-obstacle/2D-highres.json"
+    # "$SCRIPTS_ROOT/ball-obstacle/2D.json"
+    # "$SCRIPTS_ROOT/ball-wall/2D-highres.json"
+    # "$SCRIPTS_ROOT/ball-wall/2D.json"
     # "$SCRIPTS_ROOT/ball-wall/3D.json"
-    # "$SCRIPTS_ROOT/twisting.json"
-    # "$SCRIPTS_ROOT/twisted-cylinder.json"
+    # "$SCRIPTS_ROOT/indenter/2D.json"
+    # "$SCRIPTS_ROOT/masticator/3D.json"
+    # "$SCRIPTS_ROOT/masticator/h=0.1.json"
+    # "$SCRIPTS_ROOT/masticator/h=0.05.json"
+    "$SCRIPTS_ROOT/unit-tests/sliding.json"
+    # "$SCRIPTS_ROOT/twisting-beam.json"
 )
 JOB_NAMES=(
-    "masticator_3D"
-    # "ball_wall_3D"
-    # "twisting_beam"
-    # "twisted-cylinder"
+    # "ball-obstacle-2D-highres"
+    # "ball-obstacle-2D"
+    # "ball-wall-2D-highres"
+    # "ball-wall-2D"
+    # "ball-wall-3D"
+    # "indenter-2D"
+    # "masticator-3D"
+    # "masticator-h=0.1"
+    # "masticator-h=0.05"
+    "sliding"
+    # "twisting-beam"
 )
 
 # 3. Change this to the directory containing the output files

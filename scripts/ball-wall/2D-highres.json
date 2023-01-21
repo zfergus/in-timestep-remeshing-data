@@ -7,10 +7,15 @@
         },
         "volume_selection": 1
     }, {
-        "mesh": "../meshes/obstacles/line.obj",
+        "mesh": "../../meshes/obstacles/line.obj",
         "is_obstacle": true,
         "transformation": {
             "rotation": 90
         }
-    }]
+    }],
+    "space": {
+        "remesh": {
+            "enabled": false
+        }
+    }
 }

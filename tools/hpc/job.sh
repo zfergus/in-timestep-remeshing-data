@@ -4,6 +4,9 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --time=96:00:00
 #SBATCH --mem=64GB
+#SBATCH --mail-user=zfergus@nyu.edu
+#SBATCH --mail-type=END
+#SBATCH --mail-type=FAIL
 
 PROJECT_NAME="remeshing-project"
 
