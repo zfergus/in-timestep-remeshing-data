@@ -1,20 +1,23 @@
 {
     "common": "../common.json",
-    "geometry": [{
-        "mesh": "PATCH",
-        "volume_selection": 1
-    }, {
-        "mesh": "pusher3d.obj",
-        "is_obstacle": true,
-        "surface_selection": 2,
-        "transformation": {
-            "translation": [
-                0,
-                1.2,
-                0
-            ]
+    "geometry": [
+        {
+            "mesh": "PATCH",
+            "volume_selection": 1
+        },
+        {
+            "mesh": "pusher3d.obj",
+            "is_obstacle": true,
+            "surface_selection": 2,
+            "transformation": {
+                "translation": [
+                    0,
+                    1.2,
+                    0
+                ]
+            }
         }
-    }],
+    ],
     "solver": {
         "contact": {
             "barrier_stiffness": 1e6
@@ -28,16 +31,24 @@
         "dirichlet_boundary": [
             "PATCH"
         ],
-        "obstacle_displacements": [{
-            "id": 2,
-            "value": [0, "-2*t", 0]
-        }]
+        "obstacle_displacements": [
+            {
+                "id": 2,
+                "value": [
+                    0,
+                    "-2*t",
+                    0
+                ]
+            }
+        ]
     },
-    "materials": [{
-        "id": 1,
-        "E": 5e7,
-        "nu": 0.4,
-        "rho": 1100,
-        "type": "NeoHookean"
-    }]
+    "materials": [
+        {
+            "id": 1,
+            "E": 5e5,
+            "nu": 0.4,
+            "rho": 1100,
+            "type": "NeoHookean"
+        }
+    ]
 }
