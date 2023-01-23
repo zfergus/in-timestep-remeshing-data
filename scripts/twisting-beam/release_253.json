@@ -1,0 +1,28 @@
+{
+    "common": "/scratch/zjf214/remeshing-project/scripts/twisting-beam/twisting-beam.json",
+    "input": {
+        "data": {
+            "a_path": "/scratch/zjf214/remeshing-project/results/twisting-beam/2023_01_21_07_38_53_588/restart_a_253.txt",
+            "u_path": "/scratch/zjf214/remeshing-project/results/twisting-beam/2023_01_21_07_38_53_588/restart_u_253.txt",
+            "v_path": "/scratch/zjf214/remeshing-project/results/twisting-beam/2023_01_21_07_38_53_588/restart_v_253.txt"
+        }
+    },
+    "patch": [{
+        "op": "remove",
+        "path": "/geometry/0"
+    }, {
+        "op": "add",
+        "path": "/geometry/-",
+        "value": {
+            "mesh": "/scratch/zjf214/remeshing-project/results/twisting-beam/2023_01_21_07_38_53_588/restart_mesh_253.msh"
+        }
+    }, {
+        "op": "remove",
+        "path": "/boundary_conditions/dirichlet_boundary/0"
+    }],
+    "root_path": "/scratch/zjf214/remeshing-project/scripts/twisting-beam/twisting-beam.json",
+    "time": {
+        "t0": 2.5300000000000002,
+        "tend": 6.0
+    }
+}

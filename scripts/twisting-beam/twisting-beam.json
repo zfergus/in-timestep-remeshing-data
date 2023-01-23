@@ -1,12 +1,12 @@
 {
-    "common": "common.json",
+    "common": "../common.json",
     "space": {
         "remesh": {
             "enabled": true
         }
     },
     "geometry": [{
-        "mesh": "../meshes/beam.msh",
+        "mesh": "../../meshes/beam.msh",
         "volume_selection": 1,
         "surface_selection": {
             "threshold": 0.001
