@@ -16,7 +16,7 @@
             "translation": [0.6, 0, 0]
         }
     }, {
-        "mesh": "roller1.msh",
+        "mesh": "roller5k.msh",
         "volume_selection": [{
             "id": 3,
             "radius": 0.2,
@@ -48,7 +48,7 @@
             "translation": [0, 0.4, 0]
         }
     }, {
-        "mesh": "roller1.msh",
+        "mesh": "roller5k.msh",
         "volume_selection": [{
             "id": 3,
             "radius": 0.2,
@@ -93,7 +93,7 @@
         "rhs": [9.81, 0, 0]
     },
     "time": {
-        "time_steps": 3,
+        "tend": 10,
         "dt": 0.01
     },
     "materials": [{

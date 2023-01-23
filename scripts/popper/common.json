@@ -1,7 +1,19 @@
 {
     "common": "../common.json",
-    "geometry": [
-        {
+    "space": {
+        "remesh": {
+            "enabled": true,
+            "split": {
+                "acceptance_tolerance": 1e-7,
+                "culling_threshold": 0.5
+            },
+            "collapse": {
+                "acceptance_tolerance": -1e-16,
+                "culling_threshold": 0.5
+            }
+        }
+    },
+    "geometry": [{
             "mesh": "PATCH",
             "volume_selection": 1
         },
@@ -31,24 +43,20 @@
         "dirichlet_boundary": [
             "PATCH"
         ],
-        "obstacle_displacements": [
-            {
-                "id": 2,
-                "value": [
-                    0,
-                    "-2*t",
-                    0
-                ]
-            }
-        ]
+        "obstacle_displacements": [{
+            "id": 2,
+            "value": [
+                0,
+                "-2*t",
+                0
+            ]
+        }]
     },
-    "materials": [
-        {
-            "id": 1,
-            "E": 5e5,
-            "nu": 0.4,
-            "rho": 1100,
-            "type": "NeoHookean"
-        }
-    ]
+    "materials": [{
+        "id": 1,
+        "E": 5e5,
+        "nu": 0.4,
+        "rho": 1100,
+        "type": "NeoHookean"
+    }]
 }

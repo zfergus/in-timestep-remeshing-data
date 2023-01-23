@@ -1,7 +1,6 @@
 {
     "common": "common.json",
-    "patch": [
-        {
+    "patch": [{
             "op": "replace",
             "path": "/geometry/0/mesh",
             "value": "popper5-1.msh"

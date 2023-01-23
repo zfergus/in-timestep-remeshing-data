@@ -1,0 +1,62 @@
+{
+    "common": "/scratch/zjf214/remeshing-project/scripts/masticator/3D.json",
+    "input": {
+        "data": {
+            "a_path": "/scratch/zjf214/remeshing-project/results/masticator/3D/2023_01_21_16_01_54_107/restart_a_065.txt.bin",
+            "u_path": "/scratch/zjf214/remeshing-project/results/masticator/3D/2023_01_21_16_01_54_107/restart_u_065.txt.bin",
+            "v_path": "/scratch/zjf214/remeshing-project/results/masticator/3D/2023_01_21_16_01_54_107/restart_v_065.txt.bin"
+        }
+    },
+    "patch": [{
+        "op": "remove",
+        "path": "/geometry/0"
+    }, {
+        "op": "add",
+        "path": "/geometry/0",
+        "value": {
+            "mesh": "/scratch/zjf214/remeshing-project/results/masticator/3D/2023_01_21_16_01_54_107/restart_mesh_065.msh"
+        }
+    }, {
+        "op": "replace",
+        "path": "/geometry/1/transformation/dimensions",
+        "value": [0.249999, 0.249999, 1.0]
+    }, {
+        "op": "copy",
+        "from": "/geometry/1/transformation/dimensions",
+        "path": "/geometry/2/transformation/dimensions"
+    }, {
+        "op": "copy",
+        "from": "/geometry/1/transformation/dimensions",
+        "path": "/geometry/3/transformation/dimensions"
+    }, {
+        "op": "copy",
+        "from": "/geometry/1/transformation/dimensions",
+        "path": "/geometry/4/transformation/dimensions"
+    }, {
+        "op": "copy",
+        "from": "/geometry/1/transformation/dimensions",
+        "path": "/geometry/5/transformation/dimensions"
+    }, {
+        "op": "copy",
+        "from": "/geometry/1/transformation/dimensions",
+        "path": "/geometry/6/transformation/dimensions"
+    }, {
+        "op": "copy",
+        "from": "/geometry/1/transformation/dimensions",
+        "path": "/geometry/7/transformation/dimensions"
+    }],
+    "root_path": "/scratch/zjf214/remeshing-project/scripts/masticator/3D.json",
+    "time": {
+        "t0": 3.25
+    },
+    "boundary_conditions": {
+        "obstacle_displacements": [{
+            "id": 1,
+            "value": [0, "0.76 * abs(-min(t+(5-3.25), 10) / 5 + 1) - 0.76", 0]
+        }, {
+            "id": 2,
+            "value": [0, "-0.76 * abs(-min(t+(5-3.25), 10) / 5 + 1) + 0.76", 0]
+        }],
+        "rhs": [0, 0, 0]
+    }
+}

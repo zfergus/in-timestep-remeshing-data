@@ -1,0 +1,32 @@
+{
+    "common": "spikes3d.json",
+    "time": {
+        "tend": 5,
+        "dt": 0.01
+    },
+    "boundary_conditions": {
+        "rhs": [0, 9.81, 0],
+        "dirichlet_boundary": [{
+            "id": 1,
+            "value": [0, 0, 0]
+        }]
+    },
+    "solver": {
+        "contact": {
+            "barrier_stiffness": 5e4
+        }
+    },
+    "materials": [{
+        "id": 1,
+        "E": 1e8,
+        "nu": 0.4,
+        "rho": 1100,
+        "type": "NeoHookean"
+    }, {
+        "id": 2,
+        "E": 1e5,
+        "nu": 0.4,
+        "rho": 2000,
+        "type": "NeoHookean"
+    }]
+}

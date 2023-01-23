@@ -3,7 +3,7 @@
     "patch": [{
             "op": "replace",
             "path": "/geometry/0/mesh",
-            "value": "monkey18K_u.msh"
+            "value": "monkey10k_u.msh"
         },
         {
             "op": "replace",

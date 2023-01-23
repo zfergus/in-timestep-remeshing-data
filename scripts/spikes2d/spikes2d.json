@@ -2,7 +2,7 @@
     "common": "../common.json",
     "space": {
         "remesh": {
-            "enabled": false,
+            "enabled": true,
             "split": {
                 "acceptance_tolerance": 1e-5
             }

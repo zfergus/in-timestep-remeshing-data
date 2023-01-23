@@ -1154,7 +1154,7 @@
         "type": "NeoHookean"
     }, {
         "id": 2,
-        "E": 5e5,
+        "E": 5e6,
         "nu": 0.4,
         "rho": 1100,
         "type": "NeoHookean"
