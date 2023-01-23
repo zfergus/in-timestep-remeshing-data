@@ -12,8 +12,8 @@
         "mesh": "PATH_OBJ",
         "volume_selection": -1,
         "transformation": {
-            "scale": 1.0,
-            "translation": [0.6, 0, 0]
+            "scale": 0.9,
+            "translation": [2.0, 0, 0]
         }
     }, {
         "mesh": "roller5k.msh",
@@ -33,13 +33,13 @@
             "id": 1000,
             "box": [
                 [-2, -2, -2],
-                [2, 2, 0.001]
+                [2, 2, 0.17]
             ],
             "relative": true
         }, {
             "id": 1000,
             "box": [
-                [-2, -2, 0.999],
+                [-2, -2, 0.83],
                 [2, 2, 2]
             ],
             "relative": true
@@ -65,13 +65,13 @@
             "id": 1001,
             "box": [
                 [-2, -2, -2],
-                [2, 2, 0.001]
+                [2, 2, 0.17]
             ],
             "relative": true
         }, {
             "id": 1001,
             "box": [
-                [-2, -2, 0.999],
+                [-2, -2, 0.83],
                 [2, 2, 2]
             ],
             "relative": true
