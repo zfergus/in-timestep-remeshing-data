@@ -12,7 +12,7 @@
         "mesh": "PATH_OBJ",
         "volume_selection": -1,
         "transformation": {
-            "scale": 0.5,
+            "scale": 1.0,
             "translation": [0.6, 0, 0]
         }
     }, {
@@ -98,7 +98,7 @@
     },
     "materials": [{
         "id": 1,
-        "E": 2e6,
+        "E": 2e7,
         "nu": 0.3,
         "rho": 1000,
         "type": "NeoHookean"
