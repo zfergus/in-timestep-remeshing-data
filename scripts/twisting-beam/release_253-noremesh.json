@@ -14,15 +14,23 @@
         "op": "add",
         "path": "/geometry/-",
         "value": {
-            "mesh": "/scratch/zjf214/remeshing-project/results/twisting-beam-noremesh/2023_01_23_12_50_16_966/restart_mesh_253.msh"
+            "mesh": "/scratch/zjf214/remeshing-project/results/twisting-beam-noremesh/2023_01_23_12_50_16_966/restart_mesh_253.msh",
+            "volume_selection": 1,
+            "surface_selection": {
+                "threshold": 0.001
+            }
         }
-    }, {
-        "op": "remove",
-        "path": "/boundary_conditions/dirichlet_boundary/0"
     }],
     "root_path": "/scratch/zjf214/remeshing-project/scripts/twisting-beam/twisting-beam-noremesh.json",
     "time": {
+        "dt": 0.01,
         "t0": 2.5300000000000002,
         "tend": 6.0
+    },
+    "boundary_conditions": {
+        "dirichlet_boundary": [{
+            "id": 2,
+            "value": [0, 0, 0]
+        }]
     }
 }
