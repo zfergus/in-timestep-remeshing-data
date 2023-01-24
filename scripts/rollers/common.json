@@ -45,7 +45,7 @@
             "relative": true
         }],
         "transformation": {
-            "translation": [0, 0.4, 0]
+            "translation": [0, 0, 0]
         }
     }, {
         "mesh": "roller5k.msh",
@@ -79,7 +79,7 @@
         "transformation": {
             "rotation": [36, 0, 0, 1],
             "rotation_mode": "axis_angle",
-            "translation": [0, -0.4, 0]
+            "translation": [0, 0, 0]
         }
     }],
     "boundary_conditions": {

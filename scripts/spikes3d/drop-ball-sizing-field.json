@@ -1,0 +1,8 @@
+{
+    "common": "drop-ball.json",
+    "space": {
+        "remesh": {
+            "type": "sizing_field"
+        }
+    }
+}

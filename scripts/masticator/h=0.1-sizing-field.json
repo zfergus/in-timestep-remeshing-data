@@ -1,0 +1,8 @@
+{
+    "common": "h=0.1.json",
+    "space": {
+        "remesh": {
+            "type": "sizing_field"
+        }
+    }
+}
