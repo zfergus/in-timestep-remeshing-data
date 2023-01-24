@@ -16,14 +16,16 @@ SCRIPTS=(
     # "$SCRIPTS_ROOT/indenter/2D.json"
     # "$SCRIPTS_ROOT/masticator/3D.json"
     # "$SCRIPTS_ROOT/masticator/3D-restart_065-reversed.json"
+    "$SCRIPTS_ROOT/masticator/h=0.1-sizing-field.json"
     # "$SCRIPTS_ROOT/masticator/h=0.1.json"
     # "$SCRIPTS_ROOT/masticator/h=0.05.json"
     # "$SCRIPTS_ROOT/unit-tests/sliding.json"
     # "$SCRIPTS_ROOT/twisting-beam/twisting-beam.json"
-    "$SCRIPTS_ROOT/twisting-beam/release_253.json"
+    # "$SCRIPTS_ROOT/twisting-beam/release_253.json"
     # "$SCRIPTS_ROOT/spikes2d/spikes2d.json"
     # "$SCRIPTS_ROOT/spikes3d/spikes3d.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-ball.json"
+    "$SCRIPTS_ROOT/spikes3d/drop-ball-sizing-field.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-dinosaur.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-monkey.json"
     # "$SCRIPTS_ROOT/rollers/monkey-hard-hard.json"
@@ -51,11 +53,15 @@ for (( i=0; i<${#SCRIPTS[*]}; ++i )); do
         -o "${SCRIPT_LOG_DIR}/${TIME_STAMP}.out" -e "${SCRIPT_LOG_DIR}/${TIME_STAMP}.err" \
         "$JOB" "${SCRIPTS[$i]}"
 
-    JOB_NAME="nr_${JOB_NAME}"
-    SCRIPT_LOG_DIR="${SCRIPT_LOG_DIR}-noremesh"
-    mkdir -p "$SCRIPT_LOG_DIR"
-    sbatch \
-        -J "${JOB_NAME}" \
-        -o "${SCRIPT_LOG_DIR}/${TIME_STAMP}.out" -e "${SCRIPT_LOG_DIR}/${TIME_STAMP}.err" \
-        "$JOB" "${SCRIPTS[$i]%.*}-noremesh.${SCRIPTS[$i]##*.}"
+    NOREMESH_SCRIPT="${SCRIPTS[$i]%.*}-noremesh.${SCRIPTS[$i]##*.}"
+
+    if [ -f "${NOREMESH_SCRIPT}" ]; then
+        JOB_NAME="nr_${JOB_NAME}"
+        SCRIPT_LOG_DIR="${SCRIPT_LOG_DIR}-noremesh"
+        mkdir -p "$SCRIPT_LOG_DIR"
+        sbatch \
+            -J "${JOB_NAME}" \
+            -o "${SCRIPT_LOG_DIR}/${TIME_STAMP}.out" -e "${SCRIPT_LOG_DIR}/${TIME_STAMP}.err" \
+            "$JOB" "${SCRIPTS[$i]%.*}-noremesh.${SCRIPTS[$i]##*.}"
+    fi
 done

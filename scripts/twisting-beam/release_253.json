@@ -1,5 +1,13 @@
 {
     "common": "/scratch/zjf214/remeshing-project/scripts/twisting-beam/twisting-beam.json",
+    "space": {
+        "remesh": {
+            "collapse": {
+                "abs_max_edge_length": 0.75,
+                "rel_max_edge_length": 1e100
+            }
+        }
+    },
     "input": {
         "data": {
             "a_path": "/scratch/zjf214/remeshing-project/results/twisting-beam/2023_01_21_07_38_53_588/restart_a_253.txt",

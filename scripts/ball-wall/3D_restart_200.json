@@ -1,5 +1,13 @@
 {
     "common": "/scratch/zjf214/remeshing-project/scripts/ball-wall/3D.json",
+    "space": {
+        "remesh": {
+            "collapse": {
+                "abs_max_edge_length": 0.02,
+                "rel_max_edge_length": 1e100
+            }
+        }
+    },
     "input": {
         "data": {
             "a_path": "/scratch/zjf214/remeshing-project/results/ball-wall/3D/2023_01_21_07_38_53_655/restart_a_200.txt.bin",
