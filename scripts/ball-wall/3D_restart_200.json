@@ -28,6 +28,6 @@
     "root_path": "/scratch/zjf214/remeshing-project/scripts/ball-wall/3D.json",
     "time": {
         "t0": 0.004,
-        "tend": 0.040
+        "tend": 0.04
     }
 }

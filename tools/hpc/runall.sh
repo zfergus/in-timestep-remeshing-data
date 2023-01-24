@@ -11,7 +11,7 @@ SCRIPTS=(
     # "$SCRIPTS_ROOT/ball-obstacle/2D.json"
     # "$SCRIPTS_ROOT/ball-wall/2D-highres.json"
     # "$SCRIPTS_ROOT/ball-wall/2D.json"
-    # "$SCRIPTS_ROOT/ball-wall/3D.json"
+    "$SCRIPTS_ROOT/ball-wall/3D.json"
     # "$SCRIPTS_ROOT/ball-wall/3D_restart_200.json"
     # "$SCRIPTS_ROOT/indenter/2D.json"
     # "$SCRIPTS_ROOT/masticator/3D.json"
