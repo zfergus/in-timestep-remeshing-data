@@ -1,0 +1,8 @@
+{
+    "common": "release_253.json",
+    "space": {
+        "remesh": {
+            "enabled": false
+        }
+    }
+}

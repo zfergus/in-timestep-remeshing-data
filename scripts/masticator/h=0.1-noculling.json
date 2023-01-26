@@ -1,0 +1,13 @@
+{
+    "common": "h=0.1.json",
+    "space": {
+        "remesh": {
+            "split": {
+                "culling_threshold": 0
+            },
+            "collapse": {
+                "culling_threshold": 1
+            }
+        }
+    }
+}

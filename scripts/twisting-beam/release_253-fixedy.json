@@ -1,0 +1,48 @@
+{
+    "common": "/scratch/zjf214/remeshing-project/scripts/twisting-beam/twisting-beam.json",
+    "space": {
+        "remesh": {
+            "collapse": {
+                "abs_max_edge_length": 0.75,
+                "rel_max_edge_length": 1e100
+            }
+        }
+    },
+    "input": {
+        "data": {
+            "a_path": "/scratch/zjf214/remeshing-project/results/twisting-beam/2023_01_21_07_38_53_588/restart_a_253.txt",
+            "u_path": "/scratch/zjf214/remeshing-project/results/twisting-beam/2023_01_21_07_38_53_588/restart_u_253.txt",
+            "v_path": "/scratch/zjf214/remeshing-project/results/twisting-beam/2023_01_21_07_38_53_588/restart_v_253.txt"
+        }
+    },
+    "patch": [{
+        "op": "remove",
+        "path": "/geometry/0"
+    }, {
+        "op": "add",
+        "path": "/geometry/-",
+        "value": {
+            "mesh": "/scratch/zjf214/remeshing-project/results/twisting-beam/2023_01_21_07_38_53_588/restart_mesh_253.msh",
+            "volume_selection": 1,
+            "surface_selection": {
+                "threshold": 0.001
+            }
+        }
+    }],
+    "root_path": "/scratch/zjf214/remeshing-project/scripts/twisting-beam/twisting-beam.json",
+    "time": {
+        "dt": 0.01,
+        "t0": 2.5300000000000002,
+        "tend": 6.0
+    },
+    "boundary_conditions": {
+        "dirichlet_boundary": [{
+            "id": 2,
+            "value": [0, 0, 0]
+        }, {
+            "id": 4,
+            "value": [0, 0, 0],
+            "dimension": [false, true, false]
+        }]
+    }
+}
