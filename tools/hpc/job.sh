@@ -2,8 +2,8 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
-#SBATCH --time=96:00:00
-#SBATCH --mem=64GB
+#SBATCH --time=7-00:00:00
+#SBATCH --mem=128GB
 #SBATCH --mail-user=zfergus@nyu.edu
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL

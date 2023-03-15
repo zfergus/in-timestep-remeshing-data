@@ -1,0 +1,509 @@
+{
+    "common": "drop-ball-noremesh.json",
+    "patch": [{
+            "op": "add",
+            "path": "/geometry/0/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/1/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/2/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/3/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/4/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/5/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/6/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/7/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/8/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/9/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/10/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/11/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/12/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/13/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/14/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/15/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/16/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/17/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/18/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/19/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/20/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/21/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/22/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/23/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/24/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/25/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/26/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/27/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/28/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/29/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/30/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/31/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/32/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/33/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/34/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/35/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/36/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/37/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/38/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/39/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/40/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/41/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/42/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/43/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/44/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/45/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/46/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/47/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/48/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/49/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/50/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/51/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/52/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/53/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/54/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/55/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/56/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/57/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/58/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/59/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/60/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/61/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/62/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/63/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/64/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/65/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/66/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/67/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/68/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/69/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/70/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/71/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/72/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/73/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/74/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/75/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/76/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/77/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/78/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/79/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/80/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/81/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/82/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/83/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/84/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/85/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/86/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/87/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/88/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/89/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/90/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/91/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/92/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/93/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/94/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/95/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/96/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/97/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/98/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/99/n_refs",
+            "value": 4
+        },
+        {
+            "op": "add",
+            "path": "/geometry/100/n_refs",
+            "value": 4
+        }
+    ]
+}

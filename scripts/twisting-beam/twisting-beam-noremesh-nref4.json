@@ -1,0 +1,8 @@
+{
+    "common": "twisting-beam-noremesh-nref0.json",
+    "patch": [{
+        "op": "add",
+        "path": "/geometry/0/n_refs",
+        "value": 4
+    }]
+}

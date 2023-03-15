@@ -1,0 +1,8 @@
+{
+    "common": "3D-noremesh.json",
+    "patch": [{
+        "op": "add",
+        "path": "/geometry/0/n_refs",
+        "value": 3
+    }]
+}
