@@ -1,5 +1,5 @@
 {
-    "common": "3D.json",
+    "common": "drop-ball.json",
     "space": {
         "remesh": {
             "enabled": false
