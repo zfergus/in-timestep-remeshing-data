@@ -1,0 +1,16 @@
+{
+    "common": "monkey-soft-hard-noremesh-nref0.json",
+    "patch": [{
+        "op": "add",
+        "path": "/geometry/0/n_refs",
+        "value": 2
+    }, {
+        "op": "add",
+        "path": "/geometry/1/n_refs",
+        "value": 2
+    }, {
+        "op": "add",
+        "path": "/geometry/2/n_refs",
+        "value": 2
+    }]
+}

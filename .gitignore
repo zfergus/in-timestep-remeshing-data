@@ -165,3 +165,4 @@ results
 logs
 tools/AIMPS2D.cpp
 notebooks/*.pdf
+.vscode/

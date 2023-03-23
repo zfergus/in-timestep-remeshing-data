@@ -1,0 +1,8 @@
+{
+    "common": "monkey-soft-hard.json",
+    "space": {
+        "remesh": {
+            "enabled": false
+        }
+    }
+}

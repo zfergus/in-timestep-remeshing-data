@@ -32,7 +32,11 @@
                 "body_ids": true,
                 "velocity": true,
                 "contact_forces": true,
-                "friction_forces": true
+                "friction_forces": true,
+                "scalar_values": true,
+                "tensor_values": false,
+                "discretization_order": false,
+                "nodes": false
             },
             "surface": true,
             "vismesh_rel_area": 1e7
@@ -44,9 +48,9 @@
         "restart_json": "restart_{:03d}.json",
         "data": {
             "rest_mesh": "restart_mesh_{:03d}.msh",
-            "u_path": "restart_u_{:03d}.txt",
-            "v_path": "restart_v_{:03d}.txt",
-            "a_path": "restart_a_{:03d}.txt"
+            "u_path": "restart_u_{:03d}.bin",
+            "v_path": "restart_v_{:03d}.bin",
+            "a_path": "restart_a_{:03d}.bin"
         }
     }
 }
