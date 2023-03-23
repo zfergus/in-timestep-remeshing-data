@@ -10,21 +10,22 @@
     },
     "geometry": [{
         "mesh": "PATH_OBJ",
-        "volume_selection": -1,
+        "volume_selection": "REPLACE_ME",
         "transformation": {
             "scale": 0.9,
-            "translation": [2.0, 0, 0]
+            "rotation": [-90, 0, 0],
+            "translation": [0.15, 1.0, 0]
         }
     }, {
         "mesh": "roller5k.msh",
         "volume_selection": [{
             "id": 3,
             "radius": 0.2,
-            "p1": [0, 0.4, -2],
-            "p2": [0, 0.4, 2],
+            "p1": [-0.35, 0, -2],
+            "p2": [-0.35, 0, 2],
             "relative": false
         }, {
-            "id": -1,
+            "id": "REPLACE_ME",
             "center": [0.5, 0.5, 0.5],
             "radius": 1e5,
             "relative": true
@@ -45,18 +46,18 @@
             "relative": true
         }],
         "transformation": {
-            "translation": [0, 0, 0]
+            "translation": [-0.35, 0, 0]
         }
     }, {
         "mesh": "roller5k.msh",
         "volume_selection": [{
             "id": 3,
             "radius": 0.2,
-            "p1": [0, -0.4, -2],
-            "p2": [0, -0.4, 2],
+            "p1": [0.35, 0, -2],
+            "p2": [0.35, 0, 2],
             "relative": false
         }, {
-            "id": -1,
+            "id": "REPLACE_ME",
             "center": [0.5, 0.5, 0.5],
             "radius": 1e5,
             "relative": true
@@ -77,20 +78,27 @@
             "relative": true
         }],
         "transformation": {
-            "rotation": [36, 0, 0, 1],
-            "rotation_mode": "axis_angle",
-            "translation": [0, 0, 0]
+            "rotation": [0, 0, 0],
+            "translation": [0.35, 0, 0]
         }
     }],
     "boundary_conditions": {
         "dirichlet_boundary": [{
             "id": 1000,
-            "value": ["rotate_2D_x(x,y-0.4,-2*pi*t/10)-x", "rotate_2D_y(x,y-0.4,-2*pi*t/10)+0.4-y", 0]
+            "value": [
+                "-x + y*sin(pi*t/5) + (x + 0.35)*cos(pi*t/5) - 0.35",
+                "y*cos(pi*t/5) - y - (x + 0.35)*sin(pi*t/5)",
+                0
+            ]
         }, {
             "id": 1001,
-            "value": ["rotate_2D_x(x,y+0.4,2*pi*t/10)-x", "rotate_2D_y(x,y+0.4,2*pi*t/10)-0.4-y", 0]
+            "value": [
+                "-x - y*sin(pi*t/5) + (x - 0.35)*cos(pi*t/5) + 0.35",
+                "y*cos(pi*t/5) - y + (x - 0.35)*sin(pi*t/5)",
+                0
+            ]
         }],
-        "rhs": [9.81, 0, 0]
+        "rhs": [0, 9.81, 0]
     },
     "time": {
         "tend": 10,
@@ -116,7 +124,7 @@
         "type": "NeoHookean"
     }],
     "contact": {
-        "friction_coefficient": 0.1,
+        "friction_coefficient": 0.5,
         "epsv": 0.01
     },
     "solver": {
