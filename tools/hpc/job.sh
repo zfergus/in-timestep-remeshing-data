@@ -15,11 +15,11 @@ module purge
 module load cmake/3.22.2 python/intel/3.8.6 gcc/10.2.0 hdf5/intel/1.12.0
 
 # 1. Change this to the directory containing the input files
-SCRIPTS_ROOT=$SCRATCH/$PROJECT_NAME/scripts
+SCRIPTS_ROOT=$HOME/$PROJECT_NAME/scripts
 SCRIPT=$(realpath $1)
 SCRIPT_REL=$(realpath --relative-to=$SCRIPTS_ROOT $SCRIPT)
 
-OUTPUT_ROOT=$SCRATCH/$PROJECT_NAME/results
+OUTPUT_ROOT=$SCRATCH/${PROJECT_NAME}-results
 
 # Drop the extension from script
 TIME_STAMP=$(date +%Y_%m_%d_%H_%M_%S_%3N)
@@ -27,7 +27,7 @@ OUTPUT_DIR="$OUTPUT_ROOT/${SCRIPT_REL%.*}/${TIME_STAMP}"
 mkdir -p $OUTPUT_DIR
 
 # 2. Change this to the directory containing the executable
-BIN_DIR=$SCRATCH/polyfem/build/release/
+BIN_DIR=$SCRATCH/polyfem-build/release/
 BIN="PolyFEM_bin"
 
 # 3. Save the commit hashes and git diff for reproducibility

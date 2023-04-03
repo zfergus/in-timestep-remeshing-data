@@ -3,7 +3,7 @@
 PROJECT_NAME="remeshing-project"
 
 # 1. Change this to the directory containing the input files
-SCRIPTS_ROOT=$SCRATCH/$PROJECT_NAME/scripts
+SCRIPTS_ROOT=$HOME/$PROJECT_NAME/scripts
 
 # 2. Fill in this list with the input scripts you want to run
 SCRIPTS=(
@@ -44,7 +44,7 @@ SCRIPTS=(
 )
 
 # 3. Change this to the directory containing the output files
-LOGS_DIR=$SCRATCH/$PROJECT_NAME/logs
+LOGS_DIR=$SCRATCH/${PROJECT_NAME}-results/logs
 mkdir -p $LOGS_DIR
 
 FILE_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )

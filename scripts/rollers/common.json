@@ -112,7 +112,7 @@
         "type": "NeoHookean"
     }, {
         "id": 2,
-        "E": 2e5,
+        "E": 1e4,
         "nu": 0.3,
         "rho": 1000,
         "type": "NeoHookean"
@@ -125,7 +125,7 @@
     }],
     "contact": {
         "friction_coefficient": 0.5,
-        "epsv": 0.01
+        "epsv": 0.004
     },
     "solver": {
         "contact": {
