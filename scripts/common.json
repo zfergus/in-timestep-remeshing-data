@@ -13,8 +13,8 @@
             },
             "solver": "newton",
             "x_delta": 1e-05,
-            "grad_norm": 1e-12,
-            "f_delta": 1e-12
+            "grad_norm": 0,
+            "f_delta": 0
         },
         "advanced": {
             "lump_mass_matrix": false

@@ -66,11 +66,11 @@ for (( i=0; i<${#SCRIPTS[*]}; ++i )); do
 
         if [ -f "${NOREMESH_SCRIPT}" ]; then
             JOB_NAME="nr${NREF}_$(basename "${SCRIPTS[$i]%.*}")"
-            SCRIPT_LOG_DIR="${SCRIPT_LOG_DIR}-noremesh-nref${NREF}"
-            mkdir -p "$SCRIPT_LOG_DIR"
+            NOREMESH_SCRIPT_LOG_DIR="${SCRIPT_LOG_DIR}-noremesh-nref${NREF}"
+            mkdir -p "$NOREMESH_SCRIPT_LOG_DIR"
             sbatch \
                 -J "${JOB_NAME}" \
-                -o "${SCRIPT_LOG_DIR}/${TIME_STAMP}.out" -e "${SCRIPT_LOG_DIR}/${TIME_STAMP}.err" \
+                -o "${NOREMESH_SCRIPT_LOG_DIR}/${TIME_STAMP}.out" -e "${NOREMESH_SCRIPT_LOG_DIR}/${TIME_STAMP}.err" \
                 "$JOB" "$NOREMESH_SCRIPT"
         fi
     done
