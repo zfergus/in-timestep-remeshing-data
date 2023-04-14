@@ -3,9 +3,14 @@
         "enabled": true,
         "dhat": 0.001
     },
+    "space": {
+        "advanced": {
+            "bc_method": "lsq"
+        }
+    },
     "solver": {
         "linear": {
-            "solver": "Eigen::PardisoLDLT"
+            "solver": "Eigen::CholmodDecomposition"
         },
         "nonlinear": {
             "line_search": {
