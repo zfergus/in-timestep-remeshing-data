@@ -1,0 +1,69 @@
+{
+    "common": "../common.json",
+    "space": {
+        "remesh": {
+            "enabled": true,
+            "split": {
+                "acceptance_tolerance": 1e0,
+                "culling_threshold": 0.6,
+                "min_edge_length": 1e-2
+            },
+            "swap": {
+                "enabled": true,
+                "acceptance_tolerance": -1e-1
+            },
+            "collapse": {
+                "culling_threshold": 0.4,
+                "enabled": true,
+                "acceptance_tolerance": -1e-4
+            },
+            "smooth": {
+                "enabled": true,
+                "acceptance_tolerance": -1e-1
+            }
+        }
+    },
+    "geometry": [{
+        "mesh": "../../meshes/cantilever.obj",
+        "volume_selection": 1,
+        "surface_selection": {
+            "threshold": 0.001
+        },
+        "n_refs": 1
+    }],
+    "solver": {
+        "ignore_inertia": true,
+        "contact": {
+            "barrier_stiffness": 109850
+        }
+    },
+    "contact": {
+        "enabled": false
+    },
+    "time": {
+        "dt": 0.1,
+        "tend": 1
+    },
+    "boundary_conditions": {
+        "rhs": [0, 0],
+        "dirichlet_boundary": [{
+            "id": 1,
+            "value": [0, 0]
+        }, {
+            "id": 3,
+            "value": [0, "14.74*t"],
+            "dimension": [false, true]
+        }],
+        "neumann_boundary": [{
+            "id": 3,
+            "value": [0, 0]
+        }]
+    },
+    "materials": [{
+        "id": 1,
+        "E": 1098500,
+        "nu": 0.3,
+        "rho": 1000,
+        "type": "NeoHookean"
+    }]
+}

@@ -1,0 +1,17 @@
+{
+    "common": "cantilever.json",
+    "space": {
+        "remesh": {
+            "enabled": false
+        }
+    },
+    "patch": [{
+        "op": "replace",
+        "path": "/geometry/0/mesh",
+        "value": "../../meshes/cantilever-quad.obj"
+    }, {
+        "op": "replace",
+        "path": "/geometry/0/n_refs",
+        "value": 6
+    }]
+}

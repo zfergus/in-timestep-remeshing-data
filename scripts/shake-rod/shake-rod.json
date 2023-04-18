@@ -1,0 +1,63 @@
+{
+    "common": "../common.json",
+    "space": {
+        "remesh": {
+            "enabled": false
+        }
+    },
+    "geometry": [{
+        "mesh": "../../meshes/rod.msh",
+        "volume_selection": 1,
+        "transformation": {
+            "scale": [2, 1, 1]
+        },
+        "surface_selection": {
+            "threshold": 0.001
+        }
+    }],
+    "solver": {
+        "ignore_inertia": false,
+        "nonlinear": {
+            "f_delta": 1e-16
+        },
+        "contact": {
+            "barrier_stiffness": 0.6
+        }
+    },
+    "contact": {
+        "enabled": true
+    },
+    "time": {
+        "dt": 0.025,
+        "tend": 6
+    },
+    "boundary_conditions": {
+        "rhs": [0, 0],
+        "dirichlet_boundary": [{
+            "id": 1,
+            "value": [0, 0, 0],
+            "dimension": [true, false, true]
+        }, {
+            "id": 3,
+            "value": ["0.32 * sin(4 * pi * t)", 0, 0],
+            "dimension": [true, true, true],
+            "interpolation": {
+                "type": "piecewise_constant",
+                "points": [0, 1, 1.5, 2.5, 3],
+                "values": [1, 0, -1, 0, 1],
+                "extend": "repeat"
+            }
+        }],
+        "neumann_boundary": [{
+            "id": 3,
+            "value": [0, 0]
+        }]
+    },
+    "materials": [{
+        "id": 1,
+        "E": 1e4,
+        "nu": 0.495,
+        "rho": 1340,
+        "type": "NeoHookean"
+    }]
+}

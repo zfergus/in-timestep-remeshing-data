@@ -1,7 +1,8 @@
 {
     "contact": {
         "enabled": true,
-        "dhat": 0.001
+        "dhat": 0.001,
+        "use_convergent_formulation": true
     },
     "space": {
         "advanced": {
