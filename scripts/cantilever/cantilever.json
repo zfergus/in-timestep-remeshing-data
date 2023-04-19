@@ -52,18 +52,18 @@
         }, {
             "id": 3,
             "value": [0, "14.74*t"],
-            "dimension": [false, true]
+            "dimension": [false, false]
         }],
         "neumann_boundary": [{
             "id": 3,
-            "value": [0, 0]
+            "value": [0, "1e6 * t / 16"]
         }]
     },
     "materials": [{
         "id": 1,
         "E": 1098500,
         "nu": 0.3,
-        "rho": 1000,
+        "rho": 1,
         "type": "NeoHookean"
     }]
 }
