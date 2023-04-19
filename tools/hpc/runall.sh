@@ -11,10 +11,10 @@ SCRIPTS=(
     # "$SCRIPTS_ROOT/ball-obstacle/2D.json"
     # "$SCRIPTS_ROOT/ball-wall/2D-highres.json"
     # "$SCRIPTS_ROOT/ball-wall/2D.json"
-    # "$SCRIPTS_ROOT/ball-wall/3D.json"
+    #"$SCRIPTS_ROOT/ball-wall/3D.json"
     # "$SCRIPTS_ROOT/ball-wall/3D_restart_200.json"
     # "$SCRIPTS_ROOT/indenter/2D.json"
-    # "$SCRIPTS_ROOT/masticator/3D.json"
+    #"$SCRIPTS_ROOT/masticator/3D.json"
     # "$SCRIPTS_ROOT/masticator/3D-restart_065-reversed.json"
     # "$SCRIPTS_ROOT/masticator/3D-restart_065-freeze.json"
     # "$SCRIPTS_ROOT/masticator/3D-restart_065-pull-pins.json"
@@ -33,12 +33,13 @@ SCRIPTS=(
     # "$SCRIPTS_ROOT/spikes2d/spikes2d.json"
     # "$SCRIPTS_ROOT/spikes3d/spikes3d.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-ball.json"
+    "$SCRIPTS_ROOT/spikes3d/restart_031.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-ball-sizing-field.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-dinosaur.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-monkey.json"
     # "$SCRIPTS_ROOT/rollers/monkey-hard-hard.json"
     # "$SCRIPTS_ROOT/rollers/monkey-hard-soft.json"
-    "$SCRIPTS_ROOT/rollers/monkey-soft-hard.json"
+    # "$SCRIPTS_ROOT/rollers/monkey-soft-hard.json"
     # "$SCRIPTS_ROOT/popper/popper5-1.json"
     # "$SCRIPTS_ROOT/popper/popper5-1_back.json"
 )
@@ -57,7 +58,8 @@ for (( i=0; i<${#SCRIPTS[*]}; ++i )); do
     SCRIPT_LOG_DIR="$LOGS_DIR/$(dirname $(realpath --relative-to="$SCRIPTS_ROOT" "${SCRIPTS[$i]}"))/${JOB_NAME}"
     mkdir -p "$SCRIPT_LOG_DIR"
     sbatch \
-        -J "${JOB_NAME}" \
+        --mem=32GB \
+     	-J "${JOB_NAME}" \
         -o "${SCRIPT_LOG_DIR}/${TIME_STAMP}.out" -e "${SCRIPT_LOG_DIR}/${TIME_STAMP}.err" \
         "$JOB" "${SCRIPTS[$i]}"
 
@@ -65,10 +67,16 @@ for (( i=0; i<${#SCRIPTS[*]}; ++i )); do
         NOREMESH_SCRIPT="${SCRIPTS[$i]%.*}-noremesh-nref${NREF}.${SCRIPTS[$i]##*.}"
 
         if [ -f "${NOREMESH_SCRIPT}" ]; then
+        if (( $NREF == 3 )) ; then
+            MEM="128GB"
+        else
+            MEM="32GB"
+        fi
             JOB_NAME="nr${NREF}_$(basename "${SCRIPTS[$i]%.*}")"
             NOREMESH_SCRIPT_LOG_DIR="${SCRIPT_LOG_DIR}-noremesh-nref${NREF}"
             mkdir -p "$NOREMESH_SCRIPT_LOG_DIR"
             sbatch \
+                --mem=${MEM} \
                 -J "${JOB_NAME}" \
                 -o "${NOREMESH_SCRIPT_LOG_DIR}/${TIME_STAMP}.out" -e "${NOREMESH_SCRIPT_LOG_DIR}/${TIME_STAMP}.err" \
                 "$JOB" "$NOREMESH_SCRIPT"

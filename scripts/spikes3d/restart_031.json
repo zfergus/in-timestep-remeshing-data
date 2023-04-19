@@ -1,0 +1,13 @@
+{
+    "common": "drop-ball.json",
+    "input": {
+        "data": {
+            "a_path": "restart-nref0/restart_a_031.bin",
+            "u_path": "restart-nref0/restart_u_031.bin",
+            "v_path": "restart-nref0/restart_v_031.bin"
+        }
+    },
+    "time": {
+        "t0": 0.31
+    }
+}

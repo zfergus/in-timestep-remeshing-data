@@ -3,7 +3,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=16
 #SBATCH --time=7-00:00:00
-#SBATCH --mem=128GB
+##SBATCH --mem=128GB
 #SBATCH --mail-user=zfergus@nyu.edu
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
@@ -27,6 +27,7 @@ OUTPUT_DIR="$OUTPUT_ROOT/${SCRIPT_REL%.*}/${TIME_STAMP}"
 mkdir -p $OUTPUT_DIR
 
 # 2. Change this to the directory containing the executable
+CODE_DIR=$HOME/polyfem
 BIN_DIR=$SCRATCH/polyfem-build/release/
 BIN="PolyFEM_bin"
 
@@ -35,7 +36,7 @@ cd $SCRIPTS_ROOT
 git rev-parse HEAD > $OUTPUT_DIR/project_commit.txt
 git diff > $OUTPUT_DIR/project_diff.patch
 
-cd $BIN_DIR
+cd $CODE_DIR
 git rev-parse HEAD > $OUTPUT_DIR/polyfem_commit.txt
 git diff > $OUTPUT_DIR/polyfem_diff.patch
 
@@ -43,4 +44,5 @@ git diff > $OUTPUT_DIR/polyfem_diff.patch
 # make -j16
 
 # Run job
+cd $BIN_DIR
 ./$BIN -j $SCRIPT -o $OUTPUT_DIR --log_level debug

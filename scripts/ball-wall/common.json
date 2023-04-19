@@ -21,7 +21,7 @@
         "dhat": 6.92820323e-5
     },
     "time": {
-        "tend": 0.04,
+        "tend": 0.012,
         "dt": 2e-5
     },
     "initial_conditions": {

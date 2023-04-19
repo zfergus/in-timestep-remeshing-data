@@ -1,0 +1,13 @@
+{
+    "common": "restart_031.json",
+    "space": {
+        "remesh": {
+            "enabled": false
+        }
+    },
+    "output": {
+        "data": {
+            "rest_mesh": ""
+        }
+    }
+}

@@ -15,10 +15,11 @@
         },
         "nonlinear": {
             "line_search": {
-                "method": "backtracking"
+                "method": "backtracking",
+                "use_grad_norm_tol": 0
             },
             "solver": "newton",
-            "x_delta": 1e-05,
+            "x_delta": 1e-3,
             "grad_norm": 0,
             "f_delta": 0
         },
@@ -36,15 +37,16 @@
             "options": {
                 "material": true,
                 "body_ids": true,
-                "velocity": true,
-                "contact_forces": true,
-                "friction_forces": true,
+                "velocity": false,
+                "contact_forces": false,
+                "friction_forces": false,
                 "scalar_values": true,
                 "tensor_values": false,
                 "discretization_order": false,
                 "nodes": false
             },
             "surface": true,
+            "volume": false,
             "vismesh_rel_area": 1e7
         },
         "advanced": {

@@ -1,9 +1,9 @@
 {
     "common": "monkey-soft-hard-noremesh-nref0.json",
     "patch": [{
-        "op": "add",
-        "path": "/geometry/0/n_refs",
-        "value": 2
+        "op": "replace",
+        "path": "/geometry/0/mesh",
+        "value": "monkey10k_u_nref2.msh"
     }, {
         "op": "add",
         "path": "/geometry/1/n_refs",

@@ -3,35 +3,35 @@ import re
 import pandas as pd
 
 results = [[
-    "../results/ball-wall/3D-noremesh-nref0/2023_03_20_16_16_01_759",
-    "../results/ball-wall/3D-noremesh-nref1/2023_03_20_16_29_09_880",
-    "../results/ball-wall/3D-noremesh-nref2/2023_03_20_16_38_16_660",
-    "../results/ball-wall/3D-noremesh-nref3/2023_03_20_17_26_45_789",
-    "../results/ball-wall/3D/2023_03_22_15_15_25_159",
+    "../results/ball-wall/3D-noremesh-nref0/2023_04_09_17_19_21_476",
+    "../results/ball-wall/3D-noremesh-nref1/2023_04_09_17_19_20_847",
+    "../results/ball-wall/3D-noremesh-nref2/2023_04_09_17_19_20_806",
+    "../results/ball-wall/3D-noremesh-nref3/2023_04_09_17_19_20_847",
+    "../results/ball-wall/3D/2023_04_09_17_19_20_812",
 ], [
-    "../results/masticator/3D-noremesh-nref0/2023_03_20_17_30_56_803",
-    "../results/masticator/3D-noremesh-nref1/2023_03_20_17_47_00_837",
-    "../results/masticator/3D-noremesh-nref2/2023_03_20_17_56_02_753",
-    "../results/masticator/3D-noremesh-nref3/2023_03_20_18_13_10_779",
-    "../results/masticator/3D/2023_03_22_15_15_26_226",
+    "../results/masticator/3D-noremesh-nref0/2023_04_09_17_19_20_759",
+    "../results/masticator/3D-noremesh-nref1/2023_04_09_17_23_20_567",
+    "../results/masticator/3D-noremesh-nref2/2023_04_09_18_20_29_496",
+    "../results/masticator/3D-noremesh-nref3/2023_04_09_20_14_41_972",
+    "../results/masticator/3D/2023_04_09_17_19_20_809",
 ], [
-    "../results/rollers/monkey-soft-hard-noremesh-nref0/2023_03_23_21_55_12_177",
-    "../results/rollers/monkey-soft-hard-noremesh-nref1/2023_03_20_19_17_38_820",
-    "../results/rollers/monkey-soft-hard-noremesh-nref2/2023_03_20_19_18_39_023",
-    "../results/rollers/monkey-soft-hard-noremesh-nref3/2023_03_20_19_19_40_403",
-    "../results/rollers/monkey-soft-hard/2023_03_23_21_55_12_067",
+    "../results/rollers/monkey-soft-hard-noremesh-nref0/2023_04_07_17_26_06_980",
+    "../results/rollers/monkey-soft-hard-noremesh-nref1/2023_04_07_17_28_07_468",
+    "../results/rollers/monkey-soft-hard-noremesh-nref2/2023_04_07_17_31_07_765",
+    "../results/rollers/monkey-soft-hard-noremesh-nref3/2023_04_07_17_32_07_423",
+    "../results/rollers/monkey-soft-hard/2023_04_10_20_22_50_759",
 ], [
-    "../results/spikes3d/drop-ball-noremesh-nref0/2023_03_20_18_19_18_337",
-    "../results/spikes3d/drop-ball-noremesh-nref1/2023_03_20_18_20_12_971",
-    "../results/spikes3d/drop-ball-noremesh-nref2/2023_03_20_18_27_18_623",
-    "../results/spikes3d/drop-ball-noremesh-nref3/2023_03_08_20_59_14_558",
-    "../results/spikes3d/drop-ball/2023_03_22_15_20_30_448",
+    "../results/spikes3d/restart_031-noremesh-nref0/2023_04_13_21_55_40_484",
+    "../results/spikes3d/restart_031-noremesh-nref1/2023_04_13_21_55_40_512",
+    "../results/spikes3d/restart_031-noremesh-nref2/2023_04_13_21_55_40_525",
+    "../results/spikes3d/restart_031-noremesh-nref3/xxx",
+    "../results/spikes3d/restart_031/2023_04_13_21_55_40_703",
 ], [
-    "../results/twisting-beam/twisting-beam-noremesh-nref0/2023_03_20_18_18_15_509",
-    "../results/twisting-beam/twisting-beam-noremesh-nref1/2023_03_20_18_19_12_461",
-    "../results/twisting-beam/twisting-beam-noremesh-nref2/2023_03_20_18_19_12_307",
-    "../results/twisting-beam/twisting-beam-noremesh-nref3/2023_03_20_18_19_12_379",
-    "../results/twisting-beam/twisting-beam/2023_03_22_15_20_30_423",
+    "../results/twisting-beam/twisting-beam-noremesh-nref0/2023_04_10_19_53_48_263",
+    "../results/twisting-beam/twisting-beam-noremesh-nref1/2023_04_10_19_55_48_223",
+    "../results/twisting-beam/twisting-beam-noremesh-nref2/2023_04_10_20_04_48_871",
+    "../results/twisting-beam/twisting-beam-noremesh-nref3/2023_04_10_19_53_48_278",
+    "../results/twisting-beam/twisting-beam/2023_04_10_19_53_48_283",
 ]]
 
 for scene in results:
@@ -66,6 +66,14 @@ for scene in results:
 
 scenes = ["ball-wall", "masticator", "gorilla-rollers", "drop-ball", "twisting-beam"]
 nrefs  = ["nref0", "nref1", "nref2", "nref3", "ours"]
+
+max_steps = [0] * len(scenes)
+for i, scene in enumerate(results):
+    dir = pathlib.Path(scene[-1])
+    assert((dir / "stats.csv").exists())
+    stats = pd.read_csv(dir / "stats.csv")
+    max_steps[i] = stats.shape[0]
+
 df = pd.DataFrame(index=scenes, columns=nrefs)
 mem_df = pd.DataFrame(index=scenes, columns=nrefs)
 progress = pd.DataFrame(index=scenes, columns=nrefs)
@@ -76,9 +84,9 @@ for i, scene in enumerate(results):
             continue
         stats = pd.read_csv(dir / "stats.csv")
         try:
-            df.iloc[i, j] = (stats["forward"] + stats["remeshing"] + stats["global_relaxation"]).mean()
-            mem_df.iloc[i, j] = stats["peak_mem"].max()
-            progress.iloc[i, j] = stats["time"].max()
+            df.iloc[i, j] = (stats["forward"] + stats["remeshing"] + stats["global_relaxation"])[:max_steps[i]].mean()
+            mem_df.iloc[i, j] = stats["peak_mem"][:max_steps[i]].max()
+            progress.iloc[i, j] = stats["time"][:max_steps[i]].max()
         except:
             pass
 
