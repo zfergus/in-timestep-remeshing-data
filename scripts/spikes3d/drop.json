@@ -13,7 +13,7 @@
     },
     "solver": {
         "contact": {
-            "barrier_stiffness": 6
+            "barrier_stiffness": 6e4
         }
     },
     "materials": [{
