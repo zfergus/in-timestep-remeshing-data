@@ -1,6 +1,7 @@
 import pathlib
 import re
 import pandas as pd
+import numpy as np
 
 results = [[
     "../results/ball-wall/3D-noremesh-nref0/2023_04_09_17_19_21_476",
@@ -86,7 +87,7 @@ for i, scene in enumerate(results):
         try:
             df.iloc[i, j] = (stats["forward"] + stats["remeshing"] + stats["global_relaxation"])[:max_steps[i]].mean()
             mem_df.iloc[i, j] = stats["peak_mem"][:max_steps[i]].max()
-            progress.iloc[i, j] = stats["time"][:max_steps[i]].max()
+            progress.iloc[i, j] = min(stats.shape[0], max_steps[i]) # stats["time"][:max_steps[i]].max()
         except:
             pass
 
@@ -94,5 +95,5 @@ print("Average time per step")
 print(df)
 print("\nPeak memory usage")
 print(mem_df)
-print("\nFinal timestep")
+print("\nNumber of timestep")
 print(progress)
