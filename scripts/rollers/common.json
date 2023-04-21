@@ -101,7 +101,7 @@
         "rhs": [0, 9.81, 0]
     },
     "time": {
-        "tend": 10,
+        "tend": 5,
         "dt": 0.01
     },
     "materials": [{
@@ -112,7 +112,7 @@
         "type": "NeoHookean"
     }, {
         "id": 2,
-        "E": 1e4,
+        "E": 5e4,
         "nu": 0.3,
         "rho": 1000,
         "type": "NeoHookean"
@@ -129,7 +129,7 @@
     },
     "solver": {
         "contact": {
-            "barrier_stiffness": 1e5
+            "barrier_stiffness": 3e5
         }
     }
 }

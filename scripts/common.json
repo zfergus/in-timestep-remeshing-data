@@ -6,12 +6,12 @@
     },
     "space": {
         "advanced": {
-            "bc_method": "lsq"
+            "bc_method": "sample"
         }
     },
     "solver": {
         "linear": {
-            "solver": "Eigen::CholmodDecomposition"
+            "solver": "Eigen::PardisoLLT"
         },
         "nonlinear": {
             "line_search": {

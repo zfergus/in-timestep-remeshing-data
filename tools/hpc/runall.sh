@@ -37,8 +37,6 @@ SCRIPTS=(
     # "$SCRIPTS_ROOT/spikes3d/drop-ball-sizing-field.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-dinosaur.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-monkey.json"
-    # "$SCRIPTS_ROOT/rollers/monkey-hard-hard.json"
-    # "$SCRIPTS_ROOT/rollers/monkey-hard-soft.json"
     # "$SCRIPTS_ROOT/rollers/monkey-soft-hard.json"
     # "$SCRIPTS_ROOT/popper/popper5-1.json"
     # "$SCRIPTS_ROOT/popper/popper5-1_back.json"
@@ -57,20 +55,20 @@ for (( i=0; i<${#SCRIPTS[*]}; ++i )); do
     JOB_NAME=$(basename "${SCRIPTS[$i]%.*}")
     SCRIPT_LOG_DIR="$LOGS_DIR/$(dirname $(realpath --relative-to="$SCRIPTS_ROOT" "${SCRIPTS[$i]}"))/${JOB_NAME}"
     mkdir -p "$SCRIPT_LOG_DIR"
-    sbatch \
-        --mem=32GB \
-     	-J "${JOB_NAME}" \
-        -o "${SCRIPT_LOG_DIR}/${TIME_STAMP}.out" -e "${SCRIPT_LOG_DIR}/${TIME_STAMP}.err" \
-        "$JOB" "${SCRIPTS[$i]}"
+    # sbatch \
+    #     --mem=32GB \
+    #  	-J "${JOB_NAME}" \
+    #     -o "${SCRIPT_LOG_DIR}/${TIME_STAMP}.out" -e "${SCRIPT_LOG_DIR}/${TIME_STAMP}.err" \
+    #     "$JOB" "${SCRIPTS[$i]}"
 
-    for NREF in 0 1 2 3; do
+    for NREF in 3; do
         NOREMESH_SCRIPT="${SCRIPTS[$i]%.*}-noremesh-nref${NREF}.${SCRIPTS[$i]##*.}"
 
         if [ -f "${NOREMESH_SCRIPT}" ]; then
         if (( $NREF == 3 )) ; then
-            MEM="128GB"
+            MEM="200GB"
         else
-            MEM="32GB"
+            MEM="40GB"
         fi
             JOB_NAME="nr${NREF}_$(basename "${SCRIPTS[$i]%.*}")"
             NOREMESH_SCRIPT_LOG_DIR="${SCRIPT_LOG_DIR}-noremesh-nref${NREF}"
