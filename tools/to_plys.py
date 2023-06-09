@@ -1,3 +1,4 @@
+from rclone import Rclone
 import shutil
 import numpy as np
 import pathlib
@@ -5,6 +6,7 @@ import xml.etree.ElementTree as ET
 import meshio
 import igl
 from tqdm import tqdm
+
 
 def resolve_path(path, root: pathlib.Path) -> pathlib.Path:
     path = pathlib.Path(path)
@@ -35,7 +37,7 @@ def parse_pvd(path):
     tree = ET.parse(path)
     root = tree.getroot()
     frames = root.find("Collection").findall("DataSet")
-    assert(len(frames) > 0)
+    assert (len(frames) > 0)
 
     meshes = []
     for f in map(lambda f: f.attrib["file"], frames):
@@ -77,9 +79,11 @@ def load_mesh(path):
         cells.append(("vertex", np.vstack(CV).astype("int32")))
 
     if "solution" in mesh.point_data:
-        V += mesh.point_data["solution"][I]
+        # V += mesh.point_data["solution"][I]
+        point_data = {"U": mesh.point_data["solution"][I]}
+    else:
+        point_data = {}
 
-    point_data = {}
     mesh = meshio.Mesh(points=V, cells=cells, point_data=point_data)
 
     return mesh
@@ -118,7 +122,6 @@ sim_files = results = [
 ]
 sim_files = [pathlib.Path(f).resolve() / "sim.pvd" for f in sim_files]
 
-from rclone import Rclone
 with open(pathlib.Path.home() / ".config" / "rclone" / "rclone.conf") as f:
     cfg = f.read()
 rclone = Rclone(cfg)
@@ -149,7 +152,11 @@ for f in sim_files:
             continue
         any_new_meshes = True
         mesh = load_mesh(mesh)
-        meshio.write(out_dir / f"{i:04d}.ply", mesh)
+        U = mesh.point_data["U"]
+        mesh.point_data = {}
+        meshio.write(out_dir / f"rest_{i:04d}.ply", mesh)
+        mesh.points += U
+        meshio.write(out_dir / f"deformed_{i:04d}.ply", mesh)
 
     if any_new_meshes:
         remote_path = "drive:remeshing-plys" + "/" + str(
@@ -158,7 +165,7 @@ for f in sim_files:
         rclone.copy(str(out_dir), remote_path)
 
     remote_path = "drive:remeshing-csv" + "/" + str(
-            f.parent.relative_to("/scratch/zjf214/remeshing-project-results"))
+        f.parent.relative_to("/scratch/zjf214/remeshing-project-results"))
     print(f"Uploading to {remote_path}")
-    #for csv in list(f.parent.glob("*.csv")) + list(f.parent.glob("log.txt")):
+    # for csv in list(f.parent.glob("*.csv")) + list(f.parent.glob("log.txt")):
     #    rclone.copy(csv, remote_path)

@@ -1,0 +1,11 @@
+{
+    "root_path": "/Users/zachary/Development/grad-research/contact/remeshing-project/scripts/cantilever",
+    "common": "cantilever.json",
+    "space": {
+        "remesh": {
+            "split": {
+                "acceptance_tolerance": 1e-1
+            }
+        }
+    }
+}

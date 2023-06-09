@@ -1,6 +1,7 @@
 {
     "common": "cantilever.json",
     "space": {
+        "discr_order": 2,
         "remesh": {
             "enabled": false
         }
@@ -13,5 +14,12 @@
         "op": "replace",
         "path": "/geometry/0/n_refs",
         "value": 6
-    }]
+    }],
+    "output": {
+        "paraview": {
+            "vismesh_rel_area": 1e-5,
+            "high_order_mesh": false,
+            "wireframe": false
+        }
+    }
 }

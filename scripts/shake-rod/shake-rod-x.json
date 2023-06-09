@@ -1,0 +1,12 @@
+{
+    "common": "shake-rod-y.json",
+    "patch": [{
+        "op": "replace",
+        "path": "/boundary_conditions/dirichlet_boundary/1/value/0",
+        "value": "0.32 * sin(4 * pi * t)"
+    }, {
+        "op": "replace",
+        "path": "/boundary_conditions/dirichlet_boundary/1/value/1",
+        "value": 0
+    }]
+}

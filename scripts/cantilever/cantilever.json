@@ -9,7 +9,7 @@
                 "min_edge_length": 1e-2
             },
             "swap": {
-                "enabled": true,
+                "enabled": false,
                 "acceptance_tolerance": -1e-1
             },
             "collapse": {
@@ -18,7 +18,7 @@
                 "acceptance_tolerance": -1e-4
             },
             "smooth": {
-                "enabled": true,
+                "enabled": false,
                 "acceptance_tolerance": -1e-1
             }
         }
@@ -29,7 +29,7 @@
         "surface_selection": {
             "threshold": 0.001
         },
-        "n_refs": 1
+        "n_refs": 3
     }],
     "solver": {
         "ignore_inertia": true,
@@ -65,5 +65,10 @@
         "nu": 0.3,
         "rho": 1,
         "type": "NeoHookean"
-    }]
+    }],
+    "output": {
+        "paraview": {
+            "volume": true
+        }
+    }
 }
