@@ -1,0 +1,6 @@
+{
+    "common": "3D.json",
+    "time": {
+        "dt": 1e-3
+    }
+}

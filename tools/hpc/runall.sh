@@ -41,7 +41,7 @@ for (( i=0; i<${#SCRIPTS[*]}; ++i )); do
         if (( $NREF == 3 )) ; then
             MEM="200GB"
         else
-            MEM="40GB"
+            MEM="64GB"
         fi
             JOB_NAME="nr${NREF}_$(basename "${SCRIPTS[$i]%.*}")"
             NOREMESH_SCRIPT_LOG_DIR="${SCRIPT_LOG_DIR}-noremesh-nref${NREF}"

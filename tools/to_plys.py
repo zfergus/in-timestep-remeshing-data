@@ -86,35 +86,35 @@ def load_mesh(path):
 
 
 sim_files = results = [
-    # "../results/ball-wall/3D-noremesh-nref0/2023_04_09_17_19_21_476",
-    # "../results/ball-wall/3D-noremesh-nref1/2023_04_09_17_19_20_847",
-    # "../results/ball-wall/3D-noremesh-nref2/2023_04_09_17_19_20_806",
-    # "../results/ball-wall/3D-noremesh-nref3/2023_04_09_17_19_20_847",
-    # "../results/ball-wall/3D/2023_04_09_17_19_20_812",
+    "../results/ball-wall/3D-noremesh-nref0/2023_04_09_17_19_21_476",
+    "../results/ball-wall/3D-noremesh-nref1/2023_04_09_17_19_20_847",
+    "../results/ball-wall/3D-noremesh-nref2/2023_04_09_17_19_20_806",
+    "../results/ball-wall/3D-noremesh-nref3/2023_04_09_17_19_20_847",
+    "../results/ball-wall/3D/2023_04_09_17_19_20_812",
     #
-    # "../results/masticator/3D-noremesh-nref0/2023_04_09_17_19_20_759",
-    # "../results/masticator/3D-noremesh-nref1/2023_04_09_17_23_20_567",
-    # "../results/masticator/3D-noremesh-nref2/2023_04_09_18_20_29_496",
-    # "../results/masticator/3D-noremesh-nref3/2023_04_09_20_14_41_972",
-    # "../results/masticator/3D/2023_04_09_17_19_20_809",
+    "../results/masticator/3D-noremesh-nref0/2023_04_09_17_19_20_759",
+    "../results/masticator/3D-noremesh-nref1/2023_04_09_17_23_20_567",
+    "../results/masticator/3D-noremesh-nref2/2023_04_09_18_20_29_496",
+    "../results/masticator/3D-noremesh-nref3/2023_04_09_20_14_41_972",
+    "../results/masticator/3D/2023_04_09_17_19_20_809",
     #
-    # "../results/rollers/monkey-soft-hard-noremesh-nref0/2023_04_19_00_30_36_700",
-    # "../results/rollers/monkey-soft-hard-noremesh-nref1/2023_04_19_00_30_36_671",
+    "../results/rollers/monkey-soft-hard-noremesh-nref0/2023_04_19_00_30_36_700",
+    "../results/rollers/monkey-soft-hard-noremesh-nref1/2023_04_19_00_30_36_671",
     "../results/rollers/monkey-soft-hard-noremesh-nref2/2023_04_19_00_30_36_704",
     "../results/rollers/monkey-soft-hard-noremesh-nref3/2023_04_19_00_26_32_295",
     "../results/rollers/monkey-soft-hard/2023_04_19_10_11_00_432",
     #
-    # "../results/spikes3d/restart_031-noremesh-nref0 /2023_04_13_21_55_40_484",
-    # "../results/spikes3d/restart_031-noremesh-nref1/2023_04_13_21_55_40_512",
+    "../results/spikes3d/restart_031-noremesh-nref0/2023_04_13_21_55_40_484",
+    "../results/spikes3d/restart_031-noremesh-nref1/2023_04_13_21_55_40_512",
     "../results/spikes3d/restart_031-noremesh-nref2/2023_04_13_21_55_40_525",
     "../results/spikes3d/restart_031-noremesh-nref3/2023_04_19_13_40_13_148",
     "../results/spikes3d/restart_031/2023_04_13_21_55_40_703",
     #
-    # "../results/twisting-beam/twisting-beam-noremesh-nref0/2023_04_10_19_53_48_263",
-    # "../results/twisting-beam/twisting-beam-noremesh-nref1/2023_04_10_19_55_48_223",
-    # "../results/twisting-beam/twisting-beam-noremesh-nref2/2023_04_10_20_04_48_871",
-    # "../results/twisting-beam/twisting-beam-noremesh-nref3/2023_04_10_19_53_48_278",
-    # "../results/twisting-beam/twisting-beam/2023_04_10_19_53_48_283",
+    "../results/twisting-beam/twisting-beam-noremesh-nref0/2023_04_10_19_53_48_263",
+    "../results/twisting-beam/twisting-beam-noremesh-nref1/2023_04_10_19_55_48_223",
+    "../results/twisting-beam/twisting-beam-noremesh-nref2/2023_04_10_20_04_48_871",
+    "../results/twisting-beam/twisting-beam-noremesh-nref3/2023_04_10_19_53_48_278",
+    "../results/twisting-beam/twisting-beam/2023_04_10_19_53_48_283",
 ]
 sim_files = [pathlib.Path(f).resolve() / "sim.pvd" for f in sim_files]
 
@@ -138,8 +138,8 @@ for f in sim_files:
 
     if "noremesh" not in str(f):
         meshes = meshes[0::3]
-        if out_dir.exists():
-            shutil.rmtree(out_dir)
+        # if out_dir.exists():
+        #     shutil.rmtree(out_dir)
 
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -156,3 +156,9 @@ for f in sim_files:
             f.parent.relative_to("/scratch/zjf214/remeshing-project-results"))
         print(f"Uploading to {remote_path}")
         rclone.copy(str(out_dir), remote_path)
+
+    remote_path = "drive:remeshing-csv" + "/" + str(
+            f.parent.relative_to("/scratch/zjf214/remeshing-project-results"))
+    print(f"Uploading to {remote_path}")
+    #for csv in list(f.parent.glob("*.csv")) + list(f.parent.glob("log.txt")):
+    #    rclone.copy(csv, remote_path)
