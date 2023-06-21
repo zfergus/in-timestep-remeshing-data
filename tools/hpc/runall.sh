@@ -7,12 +7,15 @@ SCRIPTS_ROOT=$HOME/$PROJECT_NAME/scripts
 
 # 2. Fill in this list with the input scripts you want to run
 SCRIPTS=(
-    "$SCRIPTS_ROOT/ball-wall/3D.json"
-    "$SCRIPTS_ROOT/masticator/3D.json"
-    "$SCRIPTS_ROOT/twisting-beam/twisting-beam.json"
+    # "$SCRIPTS_ROOT/ball-wall/3D.json"
+    # "$SCRIPTS_ROOT/masticator/3D.json"
+    "$SCRIPTS_ROOT/masticator/3D-dt=1e-2.json"
+    "$SCRIPTS_ROOT/masticator/3D-dt=5e-3.json"
+    # "$SCRIPTS_ROOT/masticator/3D-dt=1e-3.json"
+    # "$SCRIPTS_ROOT/twisting-beam/twisting-beam.json"
     # "$SCRIPTS_ROOT/spikes3d/drop-ball.json"
-    "$SCRIPTS_ROOT/spikes3d/restart_031.json"
-    "$SCRIPTS_ROOT/rollers/monkey-soft-hard.json"
+    # "$SCRIPTS_ROOT/spikes3d/restart_031.json"
+    # "$SCRIPTS_ROOT/rollers/monkey-soft-hard.json"
 )
 
 # 3. Change this to the directory containing the output files
@@ -38,11 +41,11 @@ for (( i=0; i<${#SCRIPTS[*]}; ++i )); do
         NOREMESH_SCRIPT="${SCRIPTS[$i]%.*}-noremesh-nref${NREF}.${SCRIPTS[$i]##*.}"
 
         if [ -f "${NOREMESH_SCRIPT}" ]; then
-        if (( $NREF == 3 )) ; then
-            MEM="200GB"
-        else
-            MEM="64GB"
-        fi
+            if (( $NREF == 3 )) ; then
+                MEM="200GB"
+            else
+                MEM="64GB"
+            fi
             JOB_NAME="nr${NREF}_$(basename "${SCRIPTS[$i]%.*}")"
             NOREMESH_SCRIPT_LOG_DIR="${SCRIPT_LOG_DIR}-noremesh-nref${NREF}"
             mkdir -p "$NOREMESH_SCRIPT_LOG_DIR"
