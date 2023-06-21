@@ -4,7 +4,7 @@
     "space": {
         "remesh": {
             "split": {
-                "acceptance_tolerance": 1e-3
+                "acceptance_tolerance": 0.1
             }
         }
     }

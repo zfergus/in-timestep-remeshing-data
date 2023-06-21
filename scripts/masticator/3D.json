@@ -4,7 +4,7 @@
         "remesh": {
             "enabled": true,
             "split": {
-                "acceptance_tolerance": 1e-5
+                "acceptance_tolerance": 0.004
             }
         }
     },

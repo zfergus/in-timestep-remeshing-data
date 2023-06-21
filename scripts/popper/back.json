@@ -4,17 +4,16 @@
         "remesh": {
             "enabled": true,
             "split": {
-                "acceptance_tolerance": 1e-7,
+                "acceptance_tolerance": 1e-3,
                 "culling_threshold": 0.5
             },
             "collapse": {
-                "acceptance_tolerance": -1e-16,
+                "acceptance_tolerance": -1e-12,
                 "culling_threshold": 0.5
             }
         }
     },
-    "geometry": [
-        {
+    "geometry": [{
             "mesh": "PATCH",
             "volume_selection": 1,
             "transformation": {
@@ -42,16 +41,14 @@
         }
     },
     "initial_conditions": {
-        "velocity": [
-            {
-                "id": 1,
-                "value": [
-                    0,
-                    100,
-                    0
-                ]
-            }
-        ]
+        "velocity": [{
+            "id": 1,
+            "value": [
+                0,
+                100,
+                0
+            ]
+        }]
     },
     "time": {
         "tend": 0.01,
@@ -64,13 +61,11 @@
             0
         ]
     },
-    "materials": [
-        {
-            "id": 1,
-            "E": 5e5,
-            "nu": 0.4,
-            "rho": 1100,
-            "type": "NeoHookean"
-        }
-    ]
+    "materials": [{
+        "id": 1,
+        "E": 5e5,
+        "nu": 0.4,
+        "rho": 1100,
+        "type": "NeoHookean"
+    }]
 }

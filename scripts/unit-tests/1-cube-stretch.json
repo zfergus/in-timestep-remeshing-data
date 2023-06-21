@@ -4,8 +4,11 @@
         "remesh": {
             "enabled": true,
             "split": {
-                "acceptance_tolerance": 1e-6,
+                "acceptance_tolerance": 0.0016,
                 "culling_threshold": 0.8
+            },
+            "smooth": {
+                "enabled": false
             }
         }
     },

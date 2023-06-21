@@ -3,10 +3,10 @@
     "space": {
         "remesh": {
             "split": {
-                "acceptance_tolerance": 1e-14
+                "acceptance_tolerance": 0.000025
             },
             "collapse": {
-                "acceptance_tolerance": -1e-16
+                "acceptance_tolerance": -0.00000025
             }
         }
     },

@@ -4,21 +4,21 @@
         "remesh": {
             "enabled": true,
             "split": {
-                "acceptance_tolerance": 1e-8,
+                "acceptance_tolerance": 0.000016,
                 "culling_threshold": 0.8
             },
             "collapse": {
                 "enabled": true,
-                "acceptance_tolerance": -1e-6,
+                "acceptance_tolerance": -0.0016,
                 "culling_threshold": 0.1
             },
             "swap": {
                 "enabled": true,
-                "acceptance_tolerance": -1e-6
+                "acceptance_tolerance": -0.0016
             },
             "smooth": {
                 "enabled": true,
-                "acceptance_tolerance": -1e-6
+                "acceptance_tolerance": -0.0016
             }
         }
     },
