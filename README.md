@@ -1,6 +1,6 @@
 # In-Timestep Remeshing for Contacting Elastodynamics
 
-A repository of the data and script used in our work, "In-Timestep Remeshing for Contacting Elastodynamics" [Ferguson et al. 2022].
+A repository of the data and script used in our work, ["In-Timestep Remeshing for Contacting Elastodynamics" [Ferguson et al. 2022]](https://zferg.us/research/in-timestep-remeshing/).
 
 The scripts are input files for [PolyFEM](https://polyfem.github.io).
 
