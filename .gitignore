@@ -168,3 +168,4 @@ notebooks/*.pdf
 .vscode/
 scripts/rollers/monkey10k_u_nref3.msh
 paraview/
+notebooks/results/
