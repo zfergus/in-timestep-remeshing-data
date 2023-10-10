@@ -20,7 +20,7 @@
             },
             "solver": "newton",
             "x_delta": 1e-3,
-            "grad_norm": 0,
+            "grad_norm": 1e-8,
             "f_delta": 0
         },
         "advanced": {
@@ -45,8 +45,8 @@
                 "discretization_order": false,
                 "nodes": false
             },
-            "surface": true,
-            "volume": false,
+            "surface": false,
+            "volume": true,
             "vismesh_rel_area": 1e7
         },
         "advanced": {

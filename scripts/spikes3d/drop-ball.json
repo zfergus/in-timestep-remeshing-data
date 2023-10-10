@@ -1,5 +1,5 @@
 {
-    "common": "drop.json",
+    "common": "../common.json",
     "space": {
         "remesh": {
             "enabled": true,
@@ -8,15 +8,1143 @@
             }
         }
     },
-    "patch": [{
-        "op": "replace",
-        "path": "/geometry/100",
-        "value": {
-            "mesh": "../../meshes/sphere/sphere1K.msh",
-            "transformation": {
-                "translation": [0.9, 2, 0.9]
-            },
-            "volume_selection": 2
+    "geometry": [{
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
         }
-    }]
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 0.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 0.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 0.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 0.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 0.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 1.0]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 1.2]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 1.4]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 1.6]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.0, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.2, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.4, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.6, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [0.8, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.0, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.2, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.4, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.6, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "spike.msh",
+        "transformation": {
+            "translation": [1.8, 0.0, 1.8]
+        },
+        "volume_selection": 1,
+        "surface_selection": {
+            "id": 1,
+            "axis": -2,
+            "position": 0.01
+        }
+    }, {
+        "mesh": "../../meshes/sphere/sphere1K.msh",
+        "transformation": {
+            "translation": [0.9, 2, 0.9]
+        },
+        "volume_selection": 2
+    }],
+    "time": {
+        "tend": 5,
+        "dt": 0.01
+    },
+    "boundary_conditions": {
+        "rhs": [0, 9.81, 0],
+        "dirichlet_boundary": [{
+            "id": 1,
+            "value": [0, 0, 0]
+        }]
+    },
+    "solver": {
+        "contact": {
+            "barrier_stiffness": 6e4
+        }
+    },
+    "materials": [{
+        "id": 1,
+        "E": 1e8,
+        "nu": 0.4,
+        "rho": 1100,
+        "type": "NeoHookean"
+    }, {
+        "id": 2,
+        "E": 1e5,
+        "nu": 0.4,
+        "rho": 2000,
+        "type": "NeoHookean"
+    }],
+    "contact": {
+        "friction_coefficient": 0.1
+    }
 }

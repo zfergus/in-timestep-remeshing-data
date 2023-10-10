@@ -138,6 +138,9 @@
     "solver": {
         "contact": {
             "barrier_stiffness": 5e4
+        },
+        "nonlinear": {
+            "grad_norm": 1e-7
         }
     },
     "time": {
@@ -169,5 +172,10 @@
         "nu": 0.4,
         "rho": 1100,
         "type": "NeoHookean"
-    }]
+    }],
+    "output": {
+        "paraview": {
+            "volume": true
+        }
+    }
 }
