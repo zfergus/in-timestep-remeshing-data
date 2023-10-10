@@ -1,7 +1,0 @@
-{
-    "default_params": "defaults.json",
-    "meshes": [{
-        "mesh": "../../../meshes/square/isotropic_h=0.02.msh",
-        "body_id": 1
-    }]
-}

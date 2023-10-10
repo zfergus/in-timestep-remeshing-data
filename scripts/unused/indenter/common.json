@@ -1,5 +1,5 @@
 {
-    "common": "../common.json",
+    "common": "../../common.json",
     "space": {
         "remesh": {
             "enabled": true
@@ -42,8 +42,7 @@
         },
         "nonlinear": {
             "f_delta": 1e-13
-        },
-        "ignore_inertia": true
+        }
     },
     "contact": {
         "enabled": true,
@@ -51,7 +50,8 @@
     },
     "time": {
         "dt": 0.01,
-        "tend": 0.2
+        "tend": 0.2,
+        "quasistatic": true
     },
     "boundary_conditions": {
         "rhs": [0, 0],

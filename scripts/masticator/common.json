@@ -36,7 +36,6 @@
             "friction_iterations": 1000,
             "barrier_stiffness": 1e3
         },
-        "ignore_inertia": false,
         "nonlinear": {
             "max_iterations": 3000
         }

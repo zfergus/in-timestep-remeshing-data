@@ -3,7 +3,7 @@
     "patch": [{
         "op": "replace",
         "path": "/geometry/0/mesh",
-        "value": "../../meshes/circle/isotropic_h=0.02.msh"
+        "value": "../../../meshes/circle/isotropic_h=0.02.msh"
     }],
     "space": {
         "remesh": {

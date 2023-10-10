@@ -1,5 +1,5 @@
 {
-    "common": "common.json",
+    "common": "../common.json",
     "space": {
         "remesh": {
             "enabled": true,
@@ -9,7 +9,7 @@
         }
     },
     "geometry": [{
-        "mesh": "../meshes/hollow-cylinder/N=100.msh",
+        "mesh": "../../meshes/hollow-cylinder/N=100.msh",
         "transformation": {
             "rotation": [0, 90, 0]
         },
@@ -21,15 +21,15 @@
     "solver": {
         "contact": {
             "barrier_stiffness": 1e4
-        },
-        "ignore_inertia": true
+        }
     },
     "contact": {
         "enabled": true
     },
     "time": {
         "dt": 0.025,
-        "tend": 1.1
+        "tend": 1.1,
+        "quasistatic": true
     },
     "boundary_conditions": {
         "rhs": [0, 9.8, 0],

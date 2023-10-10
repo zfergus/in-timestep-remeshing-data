@@ -17,6 +17,6 @@
         }
     ],
     "output": {
-        "directory": "../results/popper5-1"
+        "directory": "../../results/popper5-1"
     }
 }

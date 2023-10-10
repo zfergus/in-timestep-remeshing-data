@@ -1,5 +1,5 @@
 {
-    "common": "../common.json",
+    "common": "../../common.json",
     "space": {
         "remesh": {
             "enabled": true,
@@ -9,13 +9,13 @@
         }
     },
     "geometry": [{
-        "mesh": "../../meshes/circle/isotropic_h=0.1.msh",
+        "mesh": "../../../meshes/circle/isotropic_h=0.1.msh",
         "transformation": {
             "translation": [-2.5, 0]
         },
         "volume_selection": 1
     }, {
-        "mesh": "../../meshes/squircle.msh",
+        "mesh": "../../../meshes/squircle.msh",
         "is_obstacle": true,
         "transformation": {
             "dimensions": [0.1, 0.1]

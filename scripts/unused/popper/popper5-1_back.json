@@ -6,7 +6,7 @@
         "value": "popper5-1.msh"
     }],
     "output": {
-        "directory": "../results/popper5-1_back"
+        "directory": "../../results/popper5-1_back"
     },
     "input": {
         "data": {

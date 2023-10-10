@@ -32,7 +32,6 @@
         }
     }],
     "solver": {
-        "ignore_inertia": true,
         "contact": {
             "barrier_stiffness": 350
         }
@@ -42,7 +41,8 @@
     },
     "time": {
         "dt": 0.025,
-        "time_steps": 21
+        "time_steps": 21,
+        "quasistatic": true
     },
     "boundary_conditions": {
         "rhs": [0, 0, 0],

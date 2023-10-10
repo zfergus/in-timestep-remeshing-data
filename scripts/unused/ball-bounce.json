@@ -1,18 +1,18 @@
 {
-    "common": "common.json",
+    "common": "../common.json",
     "space": {
         "remesh": {
             "enabled": true
         }
     },
     "geometry": [{
-        "mesh": "../meshes/circle/isotropic_h=0.1.msh",
+        "mesh": "../../meshes/circle/isotropic_h=0.1.msh",
         "transformation": {
             "translation": [0, 5]
         },
         "volume_selection": 1
     }, {
-        "mesh": "../meshes/obstacles/line.obj",
+        "mesh": "../../meshes/obstacles/line.obj",
         "is_obstacle": true
     }],
     "contact": {

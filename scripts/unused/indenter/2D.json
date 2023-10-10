@@ -1,7 +1,7 @@
 {
     "common": "common.json",
     "geometry": [{
-        "mesh": "../../meshes/indenter-symmetric.obj",
+        "mesh": "../../../meshes/indenter-symmetric.obj",
         "volume_selection": [{
             "axis": "y",
             "position": 0.6,

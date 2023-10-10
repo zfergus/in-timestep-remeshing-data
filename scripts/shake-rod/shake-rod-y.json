@@ -27,7 +27,6 @@
         "n_refs": 2
     }],
     "solver": {
-        "ignore_inertia": false,
         "nonlinear": {
             "f_delta": 1e-16
         },
