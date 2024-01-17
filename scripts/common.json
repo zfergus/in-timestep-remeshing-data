@@ -13,15 +13,20 @@
         "linear": {
             "solver": ["Eigen::PardisoLLT", "Eigen::CholmodSupernodalLLT"]
         },
+        "augmented_lagrangian": {
+            "nonlinear": {
+                "x_delta": 1e-3,
+                "grad_norm": 1e-8
+            }
+        },
         "nonlinear": {
             "line_search": {
-                "method": "backtracking",
+                "method": "RobustArmijo",
                 "use_grad_norm_tol": 0
             },
-            "solver": "newton",
+            "solver": "Newton",
             "x_delta": 1e-3,
-            "grad_norm": 1e-8,
-            "f_delta": 0
+            "grad_norm": 1e-8
         },
         "advanced": {
             "lump_mass_matrix": false
